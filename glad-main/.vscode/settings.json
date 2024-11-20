@@ -1,0 +1,7 @@
+{
+    "makefile.configureOnOpen": false,
+
+    "gopls": {
+        "buildFlags": ["-tags=dev"]
+    }
+}

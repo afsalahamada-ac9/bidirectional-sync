@@ -1,0 +1,588 @@
+openapi: 3.0.0
+info:
+  title: AoL Teacher Interface
+  description: |-
+    This is an AoL Teacher API specification.
+
+  contact:
+    email: sudhagar@abovecloud9.ai
+  version: 0.0.3
+externalDocs:
+  description: Find out more about AboveCloud9.AI
+  url: https://abovecloud9.ai
+servers:
+  - url: https://api.abovecloud9.ai/api/v1 # placeholder
+tags:
+  - name: config
+    description: System configuration such as timezones supported, etc
+  - name: center
+    description: Operations about centers
+  - name: course
+    description: Operations about courses
+  - name: user
+    description: Operations about users, login, logout
+paths:
+  /course:
+    put:
+      tags:
+        - course
+      summary: Updates an existing course
+      description: Update an existing course by course id
+      operationId: updateCourse
+      requestBody:
+        description: Update an existent course
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Course'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Course'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Course not found
+        '405':
+          description: Validation exception
+      security:
+        - bearer: []
+    post:
+      tags:
+        - course
+      summary: Adds a new course
+      description: Add a new course
+      operationId: addCourse
+      requestBody:
+        description: Create a new course
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Course'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Course'
+        '405':
+          description: Invalid input
+      security:
+        - bearer: []
+  /course/findByUser:
+    get:
+      tags:
+        - course
+      summary: Finds courses by user identifier
+      description: Multiple user ids can be provided using comma separated strings
+      operationId: findCoursesByUser
+      parameters:
+        - name: userID
+          in: query
+          description: User ids that need to be considered for filter
+          required: true
+          explode: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Course'
+        '404':
+          description: Course not found
+      security:
+        - bearer: []
+  /course/master:
+    get:
+      tags:
+        - course
+      summary: Finds course masters
+      description: Retrieves all course masters configured
+      operationId: findCourseMasters
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CourseMaster'
+        '404':
+          description: Course Master not found
+      security:
+        - bearer: []
+  /course/{courseId}:
+    get:
+      tags:
+        - course
+      summary: Finds course by ID
+      description: Returns a single course
+      operationId: getCourseById
+      parameters:
+        - name: courseId
+          in: path
+          description: ID of course to return
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Course'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Course not found
+      security:
+        - bearer: []
+    delete:
+      tags:
+        - course
+      summary: Deletes a course
+      description: delete a course
+      operationId: deleteCourse
+      parameters:
+        - name: courseId
+          in: path
+          description: Course id to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: Invalid Course id
+      security:
+        - bearer: []
+
+  /center:
+    get:
+      tags:
+        - center
+      summary: Finds centers
+      description: Returns all the centers. We may need to optimize by returning the centers that match the search string
+      operationId: findCenters
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Center'
+        '404':
+          description: Center not found
+
+  /config:
+    get:
+      tags:
+        - config
+      summary: Retrieves configuration
+      description: Returns the configuration 
+      operationId: getConfig
+      parameters:
+        - name: v
+          in: query
+          description: Current config version at the client # timestamp could be used
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Config'
+
+  /user:
+    get:
+      tags:
+        - user
+      summary: Finds user using search string
+      description: Retrives users that match the given search string. This should be paginated.
+      operationId: searchUsers
+      parameters:
+        - name: q
+          in: query
+          description: User names that need to be considered for filter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+        '404':
+          description: User not found
+      security:
+        - bearer: []
+
+  /user/login:
+    get:
+      tags:
+        - user
+      summary: Logs user into the system
+      description: ''
+      operationId: loginUser
+      parameters:
+        - name: username
+          in: query
+          description: The user name for login typically email identifier
+          required: true
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: The password for login in clear text
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          headers:
+            X-Expires-After:
+              description: date in UTC when token expires
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: Invalid username/password supplied
+  /user/logout:
+    get:
+      tags:
+        - user
+      summary: Logs out current logged in user session
+      description: ''
+      operationId: logoutUser
+      parameters: []
+      responses:
+        default:
+          description: successful operation
+  /user/{username}:
+    get:
+      tags:
+        - user
+      summary: Get user by user name
+      description: ''
+      operationId: getUserByName
+      parameters:
+        - name: username
+          in: path
+          description: 'The name that needs to be fetched. Use user1 for testing. '
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid username supplied
+        '404':
+          description: User not found
+
+components:
+  schemas:
+    DateArray:
+      type: array
+      items:
+        type: string
+        format: date          # Only date in YYYY-MM-DD format
+    DateTimeArray:
+      type: array
+      items:
+        type: string
+        format: date-time     # Full date-time in ISO 8601 format, YYYY-MM-DDTHH:MM:SSZ
+    DateTime:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date
+        start_time:
+          type: string
+          format: time
+        end_time:
+          type: string
+          format: time
+    Timezone:
+      type: string
+      description: Supported timezones
+      example: EST
+      enum:
+        - EST
+        - CST
+        - MST
+        - PST
+    Course:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10000000
+        extId:
+          type: string
+          example: 'co0198772'
+        name:
+          type: string
+        organizers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+        contacts:
+          description: Contact person for the course
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'  
+        teachers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+        notes:
+          type: string
+          description: Course notes
+        status:
+          type: string
+          description: Course status
+          example: open
+          enum:
+            - open
+            - expense-submitted
+            - expense-declined
+            - closed
+            - active
+            - declined
+            - submitted
+            - canceled
+            - inactive
+        maxAttendees:
+          type: integer
+          format: int32
+          example: 10
+        dates:
+          type: array
+          items:
+            $ref: '#/components/schemas/DateTime'
+        timezone:
+          $ref: '#/components/schemas/Timezone'
+        location:
+          $ref: '#/components/schemas/Address'
+        center:
+          $ref: '#/components/schemas/Center'
+        type:
+          type: string
+          description: Course delivery type
+          example: in-person
+          enum:
+            - in-person
+            - online
+        notify:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+        numAttendees: # Cannot be more than maxAttendees
+          type: integer
+          format: int32
+          example: 10
+        attendees:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+        autoApprove:
+          type: boolean
+    CourseMaster: # TBD: Need to understand how this is used and whether this can be managed internally
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 40000000
+        extId:
+          type: string
+          example: 'cm0198772'
+        name:
+          type: string
+    Center: # TBD: Should we have CenterDetail and Center?
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 20000000
+        extId:
+          type: string
+          example: 'ce0198772'
+        name:
+          type: string
+          example: 'Happiness Center'
+        location:
+          $ref: '#/components/schemas/Address'
+        status:
+          type: string
+          description: Center Status
+          example: active
+          enum:
+            - active
+            - inactive
+        type:
+          type: string
+          description: Center Type
+          example: ashram
+          enum:
+            - ashram
+            - temple-of-knowledge
+    Config:
+      type: object
+      properties:
+        version: # timestamp could be used. Version information to be stored at the client and sent in the config request to retrieve the changes from the backend.
+          type: integer
+          format: int64
+          example: 1
+        timezones:
+          type: array
+          items:
+            $ref: '#/components/schemas/Timezone'
+        endpoints:
+          type: array
+          items:
+            $ref: '#/components/schemas/Endpoints'
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+          example: 437 Lytton
+        city:
+          type: string
+          example: Palo Alto
+        state:
+          type: string
+          example: CA
+        zip:
+          type: string
+          example: '94301'
+        country:
+          type: string
+          example: USA
+    Endpoints:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - auth
+            - media-images
+            - media-videos
+            - analytics
+            - logging
+        url:
+          type: string
+    Account:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 30000000
+        extId:
+          type: string
+          example: 'ac1977'
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: James
+        type:
+          type: string
+          description: User Type
+          example: teacher
+          enum:
+            - teacher
+            - assistant-teacher
+            - organizer
+            - member
+            - user
+    User:
+      type: object
+      properties:
+        account:
+          $ref: '#/components/schemas/Account'
+        username:
+          type: string
+          example: theUser
+        email:
+          type: string
+          example: john@email.com
+        password: # TBD - Likely to be removed
+          type: string
+          example: '12345'
+        phone:
+          type: string
+          example: '********'
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        description:
+          type: string
+        details:
+          type: string
+        traceId:
+          type: string
+  requestBodies:
+    UserArray:
+      description: List of user object
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/User'
+  securitySchemes:
+    bearer:
+      type: apiKey
+      name: Bearer
+      in: header
+    sample_auth_unused:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://abovecloud9.ai/oauth/authorize
+          scopes:
+            write:courses: modify courses
+            read:courses: read courses

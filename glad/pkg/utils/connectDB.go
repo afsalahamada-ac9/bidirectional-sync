@@ -1,7 +1,8 @@
 package utils
 
 import (
-	module "glad/Common"
+	commonFiles "glad/common"
+	entity "glad/entity"
 	"log"
 
 	"gorm.io/driver/postgres"
@@ -9,17 +10,20 @@ import (
 )
 
 func ConnectDB() (*gorm.DB, error) {
-	url := module.GetFromEnv("CONNECTION_STRING")
+	// url := "host=localhost port=5432 user=postgres password=1234 dbname=postgres sslmode=disable"
+	url := commonFiles.GetFromEnv("CONNECTION_STRING")
+	log.Println(url, "is url")
 	db, err := gorm.Open(postgres.Open(url), &gorm.Config{})
 	if err != nil {
-		log.Println("there was an error connecting to the database")
+		log.Println("there was an error connecting to the database", err)
 		return nil, err
 	}
-	// err = db.AutoMigrate()
-	// if err != nil {
-	// 	log.Println("there was an error migrating the database")
-	// 	return nil, err
-	// }
+	err = db.AutoMigrate(&entity.EventValue{})
+	if err != nil {
+		log.Println("there was an error migrating the database", err)
+		return nil, err
+	}
+	log.Println("migration success")
 	return db, nil
 
 }

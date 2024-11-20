@@ -3,7 +3,7 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
-	common "glad/Common"
+	common "glad/common"
 	token "glad/entity"
 	"log"
 	"net/http"

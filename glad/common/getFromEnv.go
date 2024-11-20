@@ -8,12 +8,14 @@ import (
 
 func GetFromEnv(key string) string {
 	viper.SetConfigFile(".env")
+	log.Println("key:", key)
 	err := viper.ReadInConfig()
 	if err != nil {
 		// todo: clean architecture based implementation
-		log.Println("there is an error in the config file")
+		log.Println("there is an error in the config file", err)
 	}
 	value, ok := viper.Get(key).(string)
+	log.Println(value, "received")
 	if !ok {
 		log.Println("error getting the key")
 	}
