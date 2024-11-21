@@ -3,7 +3,7 @@ package Infrastructure
 import (
 	"bytes"
 	"encoding/json"
-	common "glad/Common"
+	utils "glad/common"
 	entity "glad/entity"
 	"log"
 	"net/http"
@@ -11,7 +11,7 @@ import (
 
 // this is the data that will be sent from aws
 func SendToSF(sendToSf entity.SFData) {
-	sf := common.GetFromEnv("SEND_DATA_TO_SF")
+	sf := utils.GetFromEnv("SEND_DATA_TO_SF")
 	jsonData, err := json.Marshal(sendToSf)
 	if err != nil {
 		log.Println("there is an error in the input file", err)

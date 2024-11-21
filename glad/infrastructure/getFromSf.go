@@ -2,7 +2,7 @@ package Infrastructure
 
 import (
 	"encoding/json"
-	common "glad/Common"
+	utils "glad/common"
 	entity "glad/entity"
 	"log"
 	"net/http"
@@ -10,8 +10,8 @@ import (
 
 // note: this represents data that is sent from salesforce
 func FetchSfData() entity.AWS {
-	apiUrl := common.GetFromEnv("GET_SF_DATA")
-	body := "Bearer " + common.GetFromEnv("AUTH_TOKEN")
+	apiUrl := utils.GetFromEnv("GET_SF_DATA")
+	body := "Bearer " + utils.GetFromEnv("AUTH_TOKEN")
 	req, err := http.NewRequest("GET", apiUrl, nil)
 	if err != nil {
 		log.Println("there was an error creating the request")
