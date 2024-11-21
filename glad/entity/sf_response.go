@@ -6,6 +6,7 @@ type AWS struct {
 	Operation *string    `json:"operation"`
 }
 
+// data sent from sf
 type EventValue struct {
 	CoTeacher2     *string `json:"Co_Teacher_2__c"`
 	CoTeacher1     *string `json:"Co_Teacher_1__c"`

@@ -5,12 +5,13 @@ import (
 	"encoding/json"
 	utils "glad/common"
 	entity "glad/entity"
+	"io/ioutil"
 	"log"
 	"net/http"
 )
 
 // this is the data that will be sent from aws
-func SendToSF(sendToSf entity.SFData) {
+func SendToSF(sendToSf entity.SFData) string {
 	sf := utils.GetFromEnv("SEND_DATA_TO_SF")
 	jsonData, err := json.Marshal(sendToSf)
 	if err != nil {
@@ -20,15 +21,23 @@ func SendToSF(sendToSf entity.SFData) {
 	if err != nil {
 		log.Println("error creating the request")
 	}
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Authorization", "Bearer "+utils.GetFromEnv("AUTH_TOKEN"))
 	client := http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
 		log.Println("there was an error in the request", err)
 	}
-	var DataToBeSent entity.SFData
-	err = json.NewDecoder(resp.Body).Decode(&DataToBeSent)
+	var SfResult string
+	parse, err := ioutil.ReadAll(resp.Body)
+	log.Println("parse:", string(parse))
 	if err != nil {
-		log.Println("error decoding the object")
+		log.Println("error decoding the object", err)
+	}
+	err = json.Unmarshal(parse, &SfResult)
+	if err != nil {
+		log.Println(err)
 	}
 	log.Println("data was sent successfully")
+	return SfResult
 }
