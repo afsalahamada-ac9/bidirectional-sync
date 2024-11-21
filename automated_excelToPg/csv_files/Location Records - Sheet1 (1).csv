@@ -1,0 +1,396 @@
+Id,Name,Street_Address_1__c,Street_Address_2__c,City__c,State__c,Postal_Or_Zip_Code__c,Geolocation__c.latitude,Geolocation__c.longitude,Max_Capacity__c,Center_Mode__c,Is_National_Center__c,Center_URL__c
+a0C1g000000WGGlEAO,L-000205,,2401 15th Street NW,Washington DC,,,38.9217699,-77.0349922,,,FALSE,https://www.artofliving.org/us-en/node/8512
+a0C1g000000WGGmEAO,L-000206,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8513
+a0C1g000000WGGnEAO,L-000207,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8514
+a0C1g000000WGGoEAO,L-000208,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8515
+a0C1g000000WGGpEAO,L-000209,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8516
+a0C1g000000WGGqEAO,L-000210,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8517
+a0C1g000000WGGrEAO,L-000211,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8518
+a0C1g000000WGGsEAO,L-000212,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8519
+a0C1g000000WGGtEAO,L-000213,,1050 S. Forest Mall Tempe,,,85281,33.4180342,-111.9373076,,,FALSE,https://www.artofliving.org/us-en/node/8520
+a0C1g000000WGGuEAO,L-000214,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8521
+a0C1g000000WGGvEAO,L-000215,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8522
+a0C1g000000WGGwEAO,L-000216,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8523
+a0C1g000000WGGxEAO,L-000217,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8524
+a0C1g000000WGGyEAO,L-000218,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8525
+a0C1g000000WGGzEAO,L-000219,Youth Center,730 Halstead Road,Wilmington,,19803,39.8009574,-75.5500127,,,TRUE,https://www.artofliving.org/us-en/node/8526
+a0C1g000000WGH0EAO,L-000220,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8527
+a0C1g000000WGH1EAO,L-000221,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8528
+a0C1g000000WGH2EAO,L-000222,,10 Walnut Hill Park,Woburn,,1801,42.4880418,-71.1310754,,,FALSE,https://www.artofliving.org/us-en/node/8529
+a0C1g000000WGH3EAO,L-000223,,,,,,37.09024,-95.712891,,,TRUE,https://www.artofliving.org/us-en/node/8530
+a0C1g000000WGH4EAO,L-000224,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8531
+a0C1g000000WGH5EAO,L-000225,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8532
+a0C1g000000WGH6EAO,L-000226,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8533
+a0C1g000000WGH7EAO,L-000227,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8534
+a0C1g000000WGH8EAO,L-000228,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8535
+a0C1g000000WGH9EAO,L-000229,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8536
+a0C1g000000WGHAEA4,L-000230,,15130 Strathmoor Dr,Charlotte,,28277,35.039561,-80.866987,,,FALSE,https://www.artofliving.org/us-en/node/8537
+a0C1g000000WGHBEA4,L-000231,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8539
+a0C1g000000WGHCEA4,L-000232,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8540
+a0C1g000000WGHDEA4,L-000233,,165 E Square Lake Rd,Bloomfield Hills,,,42.6046986,-83.2571733,,,FALSE,https://www.artofliving.org/us-en/node/8541
+a0C1g000000WGHEEA4,L-000234,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8542
+a0C1g000000WGHFEA4,L-000235,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8543
+a0C1g000000WGHGEA4,L-000236,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8544
+a0C1g000000WGHHEA4,L-000237,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8545
+a0C1g000000WGHIEA4,L-000238,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8546
+a0C1g000000WGHJEA4,L-000239,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8547
+a0C1g000000WGHKEA4,L-000240,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8548
+a0C1g000000WGHLEA4,L-000241,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8549
+a0C1g000000WGHMEA4,L-000242,,98 Falmouth,St Portland,,,43.6623471,-70.2779965,,,FALSE,https://www.artofliving.org/us-en/node/8550
+a0C1g000000WGHNEA4,L-000243,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8551
+a0C1g000000WGHOEA4,L-000244,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8552
+a0C1g000000WGHPEA4,L-000245,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8553
+a0C1g000000WGHQEA4,L-000246,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8554
+a0C1g000000WGHREA4,L-000247,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8555
+a0C1g000000WGHSEA4,L-000248,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8556
+a0C1g000000WGHTEA4,L-000249,,2010 Virginia Street,Norman,,73071,35.205005,-97.427767,,,FALSE,https://www.artofliving.org/us-en/node/8557
+a0C1g000000WGHUEA4,L-000250,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8558
+a0C1g000000WGHVEA4,L-000251,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8559
+a0C1g000000WGHWEA4,L-000252,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8560
+a0C1g000000WGHXEA4,L-000253,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8561
+a0C1g000000WGHYEA4,L-000254,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8562
+a0C1g000000WGHZEA4,L-000255,,,,,,32.3182314,-86.902298,,,FALSE,https://www.artofliving.org/us-en/node/8563
+a0C1g000000WGHaEAO,L-000256,,"2368 Walsh Avenue,",Santa Clara,,95051,37.3693941,-121.9679041,,,FALSE,https://www.artofliving.org/us-en/node/8564
+a0C1g000000WGHbEAO,L-000257,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8566
+a0C1g000000WGHcEAO,L-000258,,,,,,32.3182314,-86.902298,,,FALSE,https://www.artofliving.org/us-en/node/8568
+a0C1g000000WGHdEAO,L-000259,,,,,,32.3182314,-86.902298,,,FALSE,https://www.artofliving.org/us-en/node/8570
+a0C1g000000WGHeEAO,L-000260,,948 West Adams Blvd,Los Angeles,,90007,34.0308765,-118.2830386,,,FALSE,https://www.artofliving.org/us-en/node/8571
+a0C1g000000WGHfEAO,L-000261,,,,,,32.3182314,-86.902298,,,FALSE,https://www.artofliving.org/us-en/node/8573
+a0C1g000000WGHgEAO,L-000262,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8574
+a0C1g000000WGHhEAO,L-000263,,4096 Peninsula Dr.,Carlsbad,,92010,33.1656521,-117.2933232,,,FALSE,https://www.artofliving.org/us-en/node/8575
+a0C1g000000WGHiEAO,L-000264,,,Stamford,,,41.0534302,-73.5387341,,,FALSE,https://www.artofliving.org/us-en/node/8577
+a0C1g000000WGHjEAO,L-000265,,,Woodlands,,,30.1658207,-95.4612625,,,FALSE,https://www.artofliving.org/us-en/node/8578
+a0C1g000000WGHkEAO,L-000266,,127 White Birch Lane,Westmont,,60559,41.818331,-87.979079,,,FALSE,https://www.artofliving.org/us-en/node/8579
+a0C1g000000WGHlEAO,L-000267,,,Winston-Salem,,,36.0998596,-80.244216,,,FALSE,https://www.artofliving.org/us-en/node/8582
+a0C1g000000WGHmEAO,L-000268,,,West Palm Beach,,,26.7153424,-80.0533746,,,FALSE,https://www.artofliving.org/us-en/node/8583
+a0C1g000000WGHnEAO,L-000269,,,West Lafayette,,47906,40.4258686,-86.9080655,,,FALSE,https://www.artofliving.org/us-en/node/8584
+a0C1g000000WGHoEAO,L-000270,"Also 48 Tarryhill Road, Tarrytown, NY",171 Lawrence Ave,Eastchester,,10709,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/8585
+a0C1g000000WGHpEAO,L-000271,21 Highland St,Southborough Recreation Center,Southborough,,1772,42.2682849,-71.5300623,,,FALSE,https://www.artofliving.org/us-en/node/8587
+a0C1g000000WGHqEAO,L-000272,,2401 15th Street NW,Washington,,20009,38.9217623,-77.0352275,,,FALSE,https://www.artofliving.org/us-en/node/8588
+a0C1g000000WGHrEAO,L-000273,,,Viroqua,,,43.5569174,-90.8887413,,,FALSE,https://www.artofliving.org/us-en/node/8589
+a0C1g000000WGHsEAO,L-000274,,165 E Square Lake,Bloomfield Hills,,48302,42.6046986,-83.2571733,,,FALSE,https://www.artofliving.org/us-en/node/8590
+a0C1g000000WGHtEAO,L-000275,,11704 S Braden Ave,Tulsa,,74137,36.0093261,-95.9208894,,,FALSE,https://www.artofliving.org/us-en/node/8592
+a0C1g000000WGHuEAO,L-000276,Unit 503,600 Straffan Drive,Timonium,,21093,39.457273,-76.666538,,,FALSE,https://www.artofliving.org/us-en/node/8593
+a0C1g000000WGHvEAO,L-000277,Physical Address:7802 Ranch Road 1051,"Mailing Address:7802 FM 1051,Box118A",Uvalde,,78801,29.2096836,-99.7861679,,,FALSE,https://www.artofliving.org/us-en/node/8594
+a0C1g000000WGHwEAO,L-000278,,,Tampa,,33637,28.0473767,-82.3611066,,,FALSE,https://www.artofliving.org/us-en/node/8595
+a0C1g000000WGHxEAO,L-000279,,,Sun Valley,,,43.6971294,-114.3517172,,,FALSE,https://www.artofliving.org/us-en/node/8596
+a0C1g000000WGHyEAO,L-000280,,,Sunnyvale,,,37.36883,-122.0363496,,,FALSE,https://www.artofliving.org/us-en/node/8598
+a0C1g000000WGHzEAO,L-000281,Suite #201,929 Fee Fee Road,Maryland Heights,,63043,38.7031295,-90.4444202,,,FALSE,https://www.artofliving.org/us-en/node/8599
+a0C1g000000WGI0EAO,L-000282,,,Sugarland,,,29.6196787,-95.6349463,,,FALSE,https://www.artofliving.org/us-en/node/8600
+a0C1g000000WGI1EAO,L-000283,,6081 Deer Ridge Trail,Springfield,,22150,38.789408,-77.157174,,,FALSE,https://www.artofliving.org/us-en/node/8601
+a0C1g000000WGI2EAO,L-000284,,,Sterling,,,41.788642,-89.6962194,,,FALSE,https://www.artofliving.org/us-en/node/8602
+a0C1g000000WGI3EAO,L-000285,,,State College,,,40.7933949,-77.8600012,,,FALSE,https://www.artofliving.org/us-en/node/8603
+a0C1g000000WGI4EAO,L-000286,,47 Foundry Road,Sharon,,2067,42.0790828,-71.204434,,,FALSE,https://www.artofliving.org/us-en/node/8605
+a0C1g000000WGI5EAO,L-000287,Suite B3,1120 West State Highway 89A,Sedona,,86336,34.8630917,-111.7804186,,,FALSE,https://www.artofliving.org/us-en/node/8606
+a0C1g000000WGI6EAO,L-000288,,P O Box 3434,Bellevue,,98009-3434,47.6101153,-122.2001506,,,FALSE,https://www.artofliving.org/us-en/node/8607
+a0C1g000000WGI7EAO,L-000289,Suite 110,1251 N Plum Grove Rd,Schaumburg,,60193,42.0521437,-88.0592556,,,FALSE,https://www.artofliving.org/us-en/node/8608
+a0C1g000000WGI8EAO,L-000290,,,Santa Fe,,,35.6869752,-105.937799,,,FALSE,https://www.artofliving.org/us-en/node/8609
+a0C1g000000WGI9EAO,L-000291,,,Saratoga,,,37.2638324,-122.0230146,,,FALSE,https://www.artofliving.org/us-en/node/8610
+a0C1g000000WGIAEA4,L-000292,,152 Kenneth St,Santa Cruz,,95060,36.969474,-122.045261,,,FALSE,https://www.artofliving.org/us-en/node/8611
+a0C1g000000WGIBEA4,L-000293,,3942 La Colina Rd,Santa Barbara,,93110,34.444557,-119.7528027,,,FALSE,https://www.artofliving.org/us-en/node/8612
+a0C1g000000WGICEA4,L-000294,,2354 Walsh Avenue,Santa Clara,,95051,37.369225,-121.9668766,,,FALSE,https://www.artofliving.org/us-en/node/8613
+a0C1g000000WGIDEA4,L-000295,,,San Jose,,,37.3393857,-121.8949555,,,FALSE,https://www.artofliving.org/us-en/node/8614
+a0C1g000000WGIEEA4,L-000296,#215,6690 Amador Plaza Road,Dublin,,94566,37.09024,-95.712891,,,TRUE,https://www.artofliving.org/us-en/node/8615
+a0C1g000000WGIFEA4,L-000297,Suite 300,43 E Gish Rd,San Jose,,95112,37.3623456,-121.90898,,,FALSE,https://www.artofliving.org/us-en/node/8616
+a0C1g000000WGIGEA4,L-000298,,308 Page Street,San Francisco,,94102,37.773854,-122.426291,,,FALSE,https://www.artofliving.org/us-en/node/8617
+a0C1g000000WGIHEA4,L-000299,,"9863 Pacific Heights Blvd, Suite B",San Diego,,92121,32.8993194,-117.1879116,,,FALSE,https://www.artofliving.org/us-en/node/8618
+a0C1g000000WGIIEA4,L-000300,,13137 Hunters Ledge,San Antonio,,78230,29.5623285,-98.5550234,,,FALSE,https://www.artofliving.org/us-en/node/8619
+a0C1g000000WGIJEA4,L-000301,,965 East 3370 South,Salt Lake City,,,40.6986475,-111.8628404,,,FALSE,https://www.artofliving.org/us-en/node/8621
+a0C1g000000WGIKEA4,L-000302,,169 Parkshore drive,Folsom,,95630,38.657716,-121.185124,,,FALSE,https://www.artofliving.org/us-en/node/8622
+a0C1g000000WGILEA4,L-000303,,4904 Aspen Hill Road,Rockville,,20853,39.070913,-77.099596,,,FALSE,https://www.artofliving.org/us-en/node/8623
+a0C1g000000WGIMEA4,L-000304,,3564 Calderwood Dr,Rockford,,61114,42.312363,-88.991954,,,FALSE,https://www.artofliving.org/us-en/node/8624
+a0C1g000000WGIXEA4,L-000305,,,Royal Oak,,,42.4894801,-83.1446485,,,FALSE,https://www.artofliving.org/us-en/node/8625
+a0C1g000000WGIYEA4,L-000306,,,Ridgway,,,38.1525873,-107.7556162,,,FALSE,https://www.artofliving.org/us-en/node/8626
+a0C1g000000WGIZEA4,L-000307,,2412 Sterlingwood Trace,Richmond,,23233,37.6349799,-77.6066237,,,FALSE,https://www.artofliving.org/us-en/node/8627
+a0C1g000000WGIaEAO,L-000308,,,Randolph,,,40.8478065,-74.5747248,,,FALSE,https://www.artofliving.org/us-en/node/8628
+a0C1g000000WGIbEAO,L-000309,,9423 Palm Bay Circle,Raleigh,,27617,35.915248,-78.7968099,,,FALSE,https://www.artofliving.org/us-en/node/8630
+a0C1g000000WGIcEAO,L-000310,,,Pueblo,,,38.2544472,-104.6091409,,,FALSE,https://www.artofliving.org/us-en/node/8631
+a0C1g000000WGIdEAO,L-000311,,,Quincy,,,42.2528772,-71.0022705,,,FALSE,https://www.artofliving.org/us-en/node/8632
+a0C1g000000WGIeEAO,L-000312,,,Providence,,,41.8239891,-71.4128343,,,FALSE,https://www.artofliving.org/us-en/node/8633
+a0C1g000000WGIfEAO,L-000313,,2 Bonner Ct,Pennington,,8534,40.304588,-74.757211,,,FALSE,https://www.artofliving.org/us-en/node/8634
+a0C1g000000WGIgEAO,L-000314,,,Prospect Heights,,60070,42.1042273,-87.9383822,,,FALSE,https://www.artofliving.org/us-en/node/8635
+a0C1g000000WGIhEAO,L-000315,,,Portland,,,45.5234515,-122.6762071,,,FALSE,https://www.artofliving.org/us-en/node/8636
+a0C1g000000WGIiEAO,L-000316,,,Pittsburgh,,,40.4406248,-79.9958864,,,FALSE,https://www.artofliving.org/us-en/node/8637
+a0C1g000000WGIjEAO,L-000317,,1330 W Auto Dr.,Tempe,,85284,33.3431488,-111.9589448,,,FALSE,https://www.artofliving.org/us-en/node/8638
+a0C1g000000WGIkEAO,L-000318,,,Philadelphia,,19106,39.9493801,-75.145782,,,FALSE,https://www.artofliving.org/us-en/node/8639
+a0C1g000000WGIlEAO,L-000319,,2 Bonner Ct.,Pennington,,8534,40.304588,-74.757211,,,FALSE,https://www.artofliving.org/us-en/node/8640
+a0C1g000000WGImEAO,L-000320,,,Pearland,,,29.5635666,-95.2860474,,,FALSE,https://www.artofliving.org/us-en/node/8641
+a0C1g000000WGInEAO,L-000321,,104 Broadway (2nd Floor),Denville,,7054,40.8914403,-74.4739402,,,FALSE,https://www.artofliving.org/us-en/node/8642
+a0C1g000000WGIoEAO,L-000322,#D7,4000 Cubberly Community Center Room,Palo Alto,,94303,37.4173933,-122.1083754,,,FALSE,https://www.artofliving.org/us-en/node/8643
+a0C1g000000WGIpEAO,L-000323,,,Tracy,,95391,37.7582199,-121.548418,,,TRUE,https://www.artofliving.org/us-en/node/8645
+a0C1g000000WGIqEAO,L-000324,,,Oxford,,,34.3664951,-89.5192484,,,FALSE,https://www.artofliving.org/us-en/node/8646
+a0C1g000000WGIrEAO,L-000325,,"Happy House, 2010 Virginia Street",Norman,,73071,35.211326,-97.4493677,,,FALSE,https://www.artofliving.org/us-en/node/8647
+a0C1g000000WGIsEAO,L-000326,,,Orlando,,32801,28.5416658,-81.3756862,,,FALSE,https://www.artofliving.org/us-en/node/8648
+a0C1g000000WGItEAO,L-000327,,4243 Telegraph Ave,Oakland,,94609,37.8043637,-122.2711137,,,FALSE,https://www.artofliving.org/us-en/node/8649
+a0C1g000000WGIuEAO,L-000328,,,Oahu,,,21.4389123,-158.0000565,,,FALSE,https://www.artofliving.org/us-en/node/8651
+a0C1g000000WGIvEAO,L-000329,,,North Shore,,,42.427081,-70.9837369,,,FALSE,https://www.artofliving.org/us-en/node/8652
+a0C1g000000WGIwEAO,L-000330,,,Northbrook,,60062,42.1275267,-87.8289548,,,FALSE,https://www.artofliving.org/us-en/node/8653
+a0C1g000000WGIxEAO,L-000331,8th floor,147 West 25th street,New York,,10001,40.7452021,-73.9935789,,,FALSE,https://www.artofliving.org/us-en/node/8654
+a0C1g000000WGIyEAO,L-000332,,108 Riviera Court,New Ulm,,77042,29.851574,-96.498868,,,FALSE,https://www.artofliving.org/us-en/node/8655
+a0C1g000000WGIzEAO,L-000333,,,New Orleans,,,29.9510658,-90.0715323,,,FALSE,https://www.artofliving.org/us-en/node/8656
+a0C1g000000WGJ0EAO,L-000334,,1415 Pulaski Highway,Newark,,19702,39.624947,-75.679924,,,FALSE,https://www.artofliving.org/us-en/node/8657
+a0C1g000000WGJ1EAO,L-000335,,185 Cold Spring Street,New Haven,,6511,41.3262457,-72.9150866,,,FALSE,https://www.artofliving.org/us-en/node/8658
+a0C1g000000WGJ2EAO,L-000336,Aurora,2938 Kendridge Lane,Naperville,,60502,41.7640308,-88.2449576,,,FALSE,https://www.artofliving.org/us-en/node/8659
+a0C1g000000WGJ3EAO,L-000337,,,Nashville,,,36.1626638,-86.7816016,,,FALSE,https://www.artofliving.org/us-en/node/8660
+a0C1g000000WGJ4EAO,L-000338,,,Monterey,,,36.6002378,-121.8946761,,,FALSE,https://www.artofliving.org/us-en/node/8661
+a0C1g000000WGJ5EAO,L-000339,,,Monument,,,39.0916586,-104.872758,,,FALSE,https://www.artofliving.org/us-en/node/8662
+a0C1g000000WGJ6EAO,L-000340,,,Modesto,,,37.6390972,-120.9968782,,,FALSE,https://www.artofliving.org/us-en/node/8663
+a0C1g000000WGJ7EAO,L-000341,,,Minneapolis,,,44.983334,-93.26667,,,FALSE,https://www.artofliving.org/us-en/node/8664
+a0C1g000000WGJ8EAO,L-000342,,2157 sw 13th ave,Miami,,33145,25.7513447,-80.2160695,,,FALSE,https://www.artofliving.org/us-en/node/8665
+a0C1g000000WGJ9EAO,L-000343,,,Milwaukee,,,43.0389025,-87.9064736,,,FALSE,https://www.artofliving.org/us-en/node/8666
+a0C1g000000WGJAEA4,L-000344,,,,,,35.265977,-89.791737,,,FALSE,https://www.artofliving.org/us-en/node/8667
+a0C1g000000WGJBEA4,L-000345,,212 Durham Ave,Metuchen,,8840,40.5423825,-74.3736626,,,FALSE,https://www.artofliving.org/us-en/node/8668
+a0C1g000000WGJCEA4,L-000346,,,Malibu,,,34.0050079,-118.8100893,,,FALSE,https://www.artofliving.org/us-en/node/8670
+a0C1g000000WGJDEA4,L-000347,Suite A,200 Route 17 South,Mahwah,,7430,41.0957832,-74.1574388,,,FALSE,https://www.artofliving.org/us-en/node/8671
+a0C1g000000WGJEEA4,L-000348,,1202 Enterprise Drive,Verona,,53593,43.0054019,-89.529672,,,FALSE,https://www.artofliving.org/us-en/node/8672
+a0C1g000000WGJFEA4,L-000349,,948 West Adams Blvd,Los Angeles,,90007,34.0307276,-118.2830823,,,FALSE,https://www.artofliving.org/us-en/node/8673
+a0C1g000000WGJGEA4,L-000350,,,Los Altos,,,37.3852183,-122.1141298,,,FALSE,https://www.artofliving.org/us-en/node/8674
+a0C1g000000WGJHEA4,L-000351,,,Lexington,,,38.0405837,-84.5037164,,,FALSE,https://www.artofliving.org/us-en/node/8675
+a0C1g000000WGJIEA4,L-000352,,1050 S. Forest Mall Tempe,Tempe,,85281,33.4180342,-111.9373076,,,FALSE,https://www.artofliving.org/us-en/node/8676
+a0C1g000000WGJJEA4,L-000353,,275 Anderson Rd.,Tahoe Vista,,96148,39.241528,-120.053293,,,FALSE,https://www.artofliving.org/us-en/node/8677
+a0C1g000000WGJKEA4,L-000354,,7104 Copernicus lane,Lanham,,20770,38.9883006,-76.8458813,,,FALSE,https://www.artofliving.org/us-en/node/8678
+a0C1g000000WGJLEA4,L-000355,,,Lafayette,,,30.2240897,-92.0198427,,,FALSE,https://www.artofliving.org/us-en/node/8679
+a0C1g000000WGJMEA4,L-000356,,"Green Tree Church-Brethren,1078 Egypt Rd",Oaks,,19456,40.1012856,-75.3835525,,,FALSE,https://www.artofliving.org/us-en/node/8680
+a0C1g000000WGJNEA4,L-000357,,,Kirksville,,,40.1947539,-92.5832496,,,FALSE,https://www.artofliving.org/us-en/node/8681
+a0C1g000000WGJOEA4,L-000358,,,Katy,,,29.7857853,-95.8243956,,,FALSE,https://www.artofliving.org/us-en/node/8682
+a0C1g000000WGJPEA4,L-000359,,P.O. Box 715,Kauai,,,22.0964396,-159.5261238,,,FALSE,https://www.artofliving.org/us-en/node/8683
+a0C1g000000WGJQEA4,L-000360,,4181 Oldmill St,Irvine,,92614,33.7011589,-117.787009,,,FALSE,https://www.artofliving.org/us-en/node/8684
+a0C1g000000WGJREA4,L-000361,,189 Brunswick Street,Jersey City,,7302,40.7264717,-74.0506723,,,FALSE,https://www.artofliving.org/us-en/node/8685
+a0C1g000000WGJSEA4,L-000362,,,Kansas City,,,39.114053,-94.6274636,,,FALSE,https://www.artofliving.org/us-en/node/8686
+a0C1g000000WGJTEA4,L-000363,,6801 Lake Plaza Drive #C308,Indianapolis,,46220,39.8798926,-86.0689035,,,FALSE,https://www.artofliving.org/us-en/node/8687
+a0C1g000000WGJUEA4,L-000364,Woodstock Yoga Center (6 Deming St),6 Deming St,Woodstock,,12498,42.0395047,-74.1165839,,,FALSE,https://www.artofliving.org/us-en/node/8688
+a0C1g000000WGJVEA4,L-000365,,"109, 8th Street",Huntsville,,35803,34.7208355,-86.6106378,,,FALSE,https://www.artofliving.org/us-en/node/8689
+a0C1g000000WGJWEA4,L-000366,,,Houston,,,29.7601927,-95.3693896,,,FALSE,https://www.artofliving.org/us-en/node/8691
+a0C1g000000WGJXEA4,L-000367,,,Hot Springs,,,34.5037004,-93.0551795,,,FALSE,https://www.artofliving.org/us-en/node/8693
+a0C1g000000WGJYEA4,L-000368,,10303 Northwest Fwy,Houston,,77092,29.8078544,-95.4577998,,,FALSE,https://www.artofliving.org/us-en/node/8694
+a0C1g000000WGJZEA4,L-000369,,,Hermosa Beach,,,33.8622366,-118.3995194,,,FALSE,https://www.artofliving.org/us-en/node/8695
+a0C1g000000WGJaEAO,L-000370,,,Hartford,,,41.7637111,-72.6850932,,,FALSE,https://www.artofliving.org/us-en/node/8699
+a0C1g000000WGJbEAO,L-000371,,1232 Sweetwood Dr,Montgomery,,36117,32.407886,-86.200165,,,FALSE,https://www.artofliving.org/us-en/node/8700
+a0C1g000000WGJcEAO,L-000372,,,Greensboro,,,36.0726354,-79.7919754,,,FALSE,https://www.artofliving.org/us-en/node/8701
+a0C1g000000WGJdEAO,L-000373,,,Greenbelt,,,39.0045544,-76.8755282,,,FALSE,https://www.artofliving.org/us-en/node/8702
+a0C1g000000WGJeEAO,L-000374,,17000 Monterey Rd,Gilroy,,95014,37.0332781,-121.5819482,,,FALSE,https://www.artofliving.org/us-en/node/8703
+a0C1g000000WGJfEAO,L-000375,,,Galveston,,,29.3013479,-94.7976958,,,FALSE,https://www.artofliving.org/us-en/node/8704
+a0C1g000000WGJgEAO,L-000376,,19520 Doctors Drive,Germantown,,20874,39.1754997,-77.268154,,,FALSE,https://www.artofliving.org/us-en/node/8705
+a0C1g000000WGJhEAO,L-000377,,357  Main Street,Gaithersburg,,20878,39.121059,-77.237678,,,FALSE,https://www.artofliving.org/us-en/node/8706
+a0C1g000000WGJiEAO,L-000378,,704 Mowry Ave,Fremont,,94536,37.5660647,-121.9740143,,,FALSE,https://www.artofliving.org/us-en/node/8707
+a0C1g000000WGJjEAO,L-000379,Foster city,800 Foster City Blvd,San Mateo,,94404,37.5578841,-122.2671307,,,FALSE,https://www.artofliving.org/us-en/node/8708
+a0C1g000000WGJkEAO,L-000380,,16450 San Carlos Blvd.,Fort Myers,,33908,26.5019096,-81.9438716,,,FALSE,https://www.artofliving.org/us-en/node/8709
+a0C1g000000WGJlEAO,L-000381,,,Fort Mill,,,35.0073697,-80.9450759,,,FALSE,https://www.artofliving.org/us-en/node/8710
+a0C1g000000WGJmEAO,L-000382,,,Fort Lauderdale,,,26.1223084,-80.1433786,,,FALSE,https://www.artofliving.org/us-en/node/8711
+a0C1g000000WGJnEAO,L-000383,,,,,,39.5500507,-105.7820674,,,FALSE,https://www.artofliving.org/us-en/node/8712
+a0C1g000000WGJoEAO,L-000384,,747 Mountain Shadows Drive,Sedona,,86336,34.8741777,-111.7930895,,,FALSE,https://www.artofliving.org/us-en/node/8713
+a0C1g000000WGJpEAO,L-000385,,169 Parkshore Dr,Folsom,,95630,38.657716,-121.185124,,,FALSE,https://www.artofliving.org/us-en/node/8714
+a0C1g000000WGJqEAO,L-000386,,,Farmington Hills,,,42.4989936,-83.3677168,,,FALSE,https://www.artofliving.org/us-en/node/8716
+a0C1g000000WGJrEAO,L-000387,,,Evanston,,,42.0450722,-87.6876969,,,FALSE,https://www.artofliving.org/us-en/node/8717
+a0C1g000000WGJsEAO,L-000388,,,Durango,,,37.27528,-107.8800667,,,FALSE,https://www.artofliving.org/us-en/node/8720
+a0C1g000000WGJtEAO,L-000389,Wayne State University,5221 Gullen Mall,Detroit,,,42.3579731,-83.0708027,,,FALSE,https://www.artofliving.org/us-en/node/8722
+a0C1g000000WGJuEAO,L-000390,,1201 S. Steele St,Denver,,80210,39.6943399,-104.95037,,,FALSE,https://www.artofliving.org/us-en/node/8723
+a0C1g000000WGJvEAO,L-000391,,,Dayton,,,39.7589478,-84.1916069,,,FALSE,https://www.artofliving.org/us-en/node/8724
+a0C1g000000WGJwEAO,L-000392,Suite #104,1404 W. Walnut Hill,Irving,,75038,32.8839094,-96.973577,,,FALSE,https://www.artofliving.org/us-en/node/8725
+a0C1g000000WGJxEAO,L-000393,"21040 Homestead Road, #101",Art of Living Cupertino Center,Cupertino,,95014,37.3370957,-122.0430956,,,TRUE,https://www.artofliving.org/us-en/node/8726
+a0C1g000000WGJyEAO,L-000394,,Art of Living Happiness Center 765 Radio Drive,Lewis Center,,43035,40.158697,-83.0085276,,,FALSE,https://www.artofliving.org/us-en/node/8727
+a0C1g000000WGJzEAO,L-000395,,8882 Warm Granite Drive,Columbia,,,39.1916181,-76.8082756,,,FALSE,https://www.artofliving.org/us-en/node/8729
+a0C1g000000WGK0EAO,L-000396,,2888 Prairie Stream Way,Columbus,,47203,39.2277252,-85.8535592,,,FALSE,https://www.artofliving.org/us-en/node/8730
+a0C1g000000WGK1EAO,L-000397,,,Colorado Springs,,,38.8338816,-104.8213634,,,FALSE,https://www.artofliving.org/us-en/node/8731
+a0C1g000000WGK2EAO,L-000398,,private residence,Clear Lake,,,29.552228,-95.1261037,,,FALSE,https://www.artofliving.org/us-en/node/8732
+a0C1g000000WGK3EAO,L-000399,,4511 Northfield Road,Warrensville Heights,,44128,41.4373682,-81.5249854,,,FALSE,https://www.artofliving.org/us-en/node/8733
+a0C1g000000WGK4EAO,L-000400,,Texas A&M University,College Station,,77840,30.6267787,-96.3404631,,,FALSE,https://www.artofliving.org/us-en/node/8734
+a0C1g000000WGK5EAO,L-000401,"723 Western Row Road, Mason",Saibaba Temple,Cincinnati,,45040,39.3364096,-84.3263149,,,FALSE,https://www.artofliving.org/us-en/node/8735
+a0C1g000000WGK6EAO,L-000402,,13029 Triadelphia Mill Rd,Clarksville,,21020,39.208485,-76.9659439,,,FALSE,https://www.artofliving.org/us-en/node/8736
+a0C1g000000WGK7EAO,L-000403,,,Chicago,,60657,41.9403795,-87.6531805,,,FALSE,https://www.artofliving.org/us-en/node/8737
+a0C1g000000WGK8EAO,L-000404,,235 Littleton Rd #1,Chelmsford,,1886,42.5865676,-71.382349,,,FALSE,https://www.artofliving.org/us-en/node/8738
+a0C1g000000WGKbEAO,L-000405,,,Charleston,,,38.3498195,-81.6326234,,,FALSE,https://www.artofliving.org/us-en/node/8740
+a0C1g000000WGKcEAO,L-000406,Back of Bldg,8632 Wilkinson Blvd,Charlotte,,28214,35.2423803,-80.9867188,,,FALSE,https://www.artofliving.org/us-en/node/8741
+a0C1g000000WGKdEAO,L-000407,,,Cascade,,,38.8966566,-104.9722013,,,FALSE,https://www.artofliving.org/us-en/node/8742
+a0C1g000000WGKeEAO,L-000408,,,Carson City,,,39.1637984,-119.7674034,,,FALSE,https://www.artofliving.org/us-en/node/8743
+a0C1g000000WGKfEAO,L-000409,,6880 Turner Creek Rd Cary,Cary,,27519,35.775117,-78.878399,,,FALSE,https://www.artofliving.org/us-en/node/8744
+a0C1g000000WGKgEAO,L-000410,,,Cape Cod,,,41.6729278,-70.3390868,,,FALSE,https://www.artofliving.org/us-en/node/8745
+a0C1g000000WGKhEAO,L-000411,,44815 Cherry Hill Rd,Canton,,48188,42.3086444,-83.482116,,,FALSE,https://www.artofliving.org/us-en/node/8746
+a0C1g000000WGKiEAO,L-000412,,17-B Bronsdon Street,Boston,,2135,42.3599211,-71.1436643,,,FALSE,https://www.artofliving.org/us-en/node/8747
+a0C1g000000WGKjEAO,L-000413,,6885 Fieldstone Dr.,Burr Ridge,,60527,41.7657169,-87.9190842,,,FALSE,https://www.artofliving.org/us-en/node/8748
+a0C1g000000WGKkEAO,L-000414,,,Califon,,,40.7195448,-74.8357215,,,FALSE,https://www.artofliving.org/us-en/node/8749
+a0C1g000000WGKlEAO,L-000415,,Texas A&M University,Bryan,,77840,30.6329818,-96.4920278,,,FALSE,https://www.artofliving.org/us-en/node/8750
+a0C1g000000WGKmEAO,L-000416,,9502 Claychin Court,Burke,,22015,38.767588,-77.272957,,,FALSE,https://www.artofliving.org/us-en/node/8751
+a0C1g000000WGKnEAO,L-000417,,"2425 Barnard Rd, Apt #18",Brownsville,,78520,25.93748,-97.504245,,,FALSE,https://www.artofliving.org/us-en/node/8752
+a0C1g000000WGKoEAO,L-000418,,2406 Kenly Place,Bowie,,20715,38.954985,-76.731895,,,FALSE,https://www.artofliving.org/us-en/node/8753
+a0C1g000000WGKpEAO,L-000419,,1025 Rosewood Ave #107,BOULDER,,80304,40.0270558,-105.2824409,,,FALSE,https://www.artofliving.org/us-en/node/8754
+a0C1g000000WGKqEAO,L-000420,,136 Virgil Day Road,Boone,,28607,36.173067,-81.586228,,,FALSE,https://www.artofliving.org/us-en/node/8755
+a0C1g000000WGKrEAO,L-000421,,,Boston College,,,42.3359054,-71.1641609,,,FALSE,https://www.artofliving.org/us-en/node/8756
+a0C1g000000WGKsEAO,L-000422,,,Boise,,,43.6187102,-116.2146068,,,FALSE,https://www.artofliving.org/us-en/node/8757
+a0C1g000000WGKtEAO,L-000423,,1613 E Emerson St,Bloomington,,61701,40.4929487,-88.9684634,,,FALSE,https://www.artofliving.org/us-en/node/8758
+a0C1g000000WGKuEAO,L-000424,,,Bloomingdale,,,41.9575285,-88.0809036,,,FALSE,https://www.artofliving.org/us-en/node/8759
+a0C1g000000WGKvEAO,L-000425,,1710 Carleton St.,Berkeley,,94707,37.8535888,-122.2396734,,,FALSE,https://www.artofliving.org/us-en/node/8761
+a0C1g000000WGKwEAO,L-000426,,,Baton Rouge,,,30.4582829,-91.1403196,,,FALSE,https://www.artofliving.org/us-en/node/8762
+a0C1g000000WGKxEAO,L-000427,Suite 208,13091 Pond Springs Rd,Austin,,78729,30.4433958,-97.7744825,,,FALSE,https://www.artofliving.org/us-en/node/8763
+a0C1g000000WGKyEAO,L-000428,Suite #400,7730 Roswell Road,Atlanta,,30350,33.9655247,-84.3642704,,,FALSE,https://www.artofliving.org/us-en/node/8764
+a0C1g000000WGKzEAO,L-000429,,3409 Skyway Dr,Auburn,,36830,32.613917,-85.431071,,,FALSE,https://www.artofliving.org/us-en/node/8765
+a0C1g000000WGL0EAO,L-000430,,"43618,Millay Court",Ashburn,,20147,39.019264,-77.491563,,,FALSE,https://www.artofliving.org/us-en/node/8766
+a0C1g000000WGL1EAO,L-000431,15311 Pioneer Blvd,Sanathan Temple,Norwalk,,90650,33.9022367,-118.081733,,,FALSE,https://www.artofliving.org/us-en/node/8768
+a0C1g000000WGL2EAO,L-000432,,"18768 Highway 18, Suite #100",Apple Valley,,92307,34.5382348,-117.2540996,,,FALSE,https://www.artofliving.org/us-en/node/8769
+a0C1g000000WGL3EAO,L-000433,,3850 Wilson Boulevard,Arlington,,22203,38.880202,-77.105456,,,FALSE,https://www.artofliving.org/us-en/node/8770
+a0C1g000000WGL4EAO,L-000434,,,Appleton,,,44.2619309,-88.4153847,,,FALSE,https://www.artofliving.org/us-en/node/8771
+a0C1g000000WGL5EAO,L-000435,,12 Summerfield Road,Amherst,,1002,42.353104,-72.488914,,,FALSE,https://www.artofliving.org/us-en/node/8772
+a0C1g000000WGL6EAO,L-000436,"530 S. State Street, Room: 2105A (2nd floor)",Michigan Union Events Services,Ann Arbor,,48108,42.2129167,-83.7305392,,,FALSE,https://www.artofliving.org/us-en/node/8773
+a0C1g000000WGL7EAO,L-000437,,,Amelia Island,,,30.6265697,-81.460856,,,FALSE,https://www.artofliving.org/us-en/node/8774
+a0C1g000000WGL8EAO,L-000438,,,Allentown,,,40.6084305,-75.4901833,,,FALSE,https://www.artofliving.org/us-en/node/8775
+a0C1g000000WGL9EAO,L-000439,,485 Mckeithen Drive,Alexandria,,71303,31.2865917,-92.5386023,,,FALSE,https://www.artofliving.org/us-en/node/8776
+a0C1g000000WGLAEA4,L-000440,,,Adjuntas,,,26.1280717,-98.0072568,,,FALSE,https://www.artofliving.org/us-en/node/8777
+a0C1g000000WGLBEA4,L-000441,,10004 Quintessence Road NE,Albuquerque,,87122,35.162365,-106.5298435,,,FALSE,https://www.artofliving.org/us-en/node/8778
+a0C1g000000WGLCEA4,L-000442,,,Birmingham,,,42.5467012,-83.2113192,,,FALSE,https://www.artofliving.org/us-en/node/8779
+a0C1g000000WGLDEA4,L-000443,,1415 Pulaski Highway,Newark,,19702,39.624947,-75.679924,,,FALSE,https://www.artofliving.org/us-en/node/8780
+a0C1g000000WGLEEA4,L-000444,,,Daytona,,,29.229602,-81.010845,,,FALSE,https://www.artofliving.org/us-en/node/8782
+a0C1g000000WGLFEA4,L-000445,,,Greenville,,,34.8526176,-82.3940104,,,FALSE,https://www.artofliving.org/us-en/node/8783
+a0C1g000000WGLGEA4,L-000446,,,Carbondale,,,37.7272727,-89.2167501,,,FALSE,https://www.artofliving.org/us-en/node/8784
+a0C1g000000WGLHEA4,L-000447,,500 W. Main Street,Lansdale,,,40.2443108,-75.2889599,,,FALSE,https://www.artofliving.org/us-en/node/8785
+a0C1g000000WGLIEA4,L-000448,,P.O.Box 1314,Pacific Palisades,,90272,34.0845245,-118.5447787,,,FALSE,https://www.artofliving.org/us-en/node/8786
+a0C1g000000WGLJEA4,L-000449,,P.O. Box 1314,Pacific Palisades,,90272,34.0845245,-118.5447787,,,FALSE,https://www.artofliving.org/us-en/node/8787
+a0C1g000000WGLKEA4,L-000450,,P.O. Box 1314,Pacific Palisades,,90272,34.0845245,-118.5447787,,,FALSE,https://www.artofliving.org/us-en/node/8788
+a0C1g000000WGLLEA4,L-000451,,"1924-B So. Pacific Coast Highway,",Redondo Beach,,90277,33.8159052,-118.3758818,,,FALSE,https://www.artofliving.org/us-en/node/8789
+a0C1g000000WGLMEA4,L-000452,,6260 Sandhill Place,Rancho Cucamonga,,91739,34.140304,-117.539885,,,FALSE,https://www.artofliving.org/us-en/node/8790
+a0C1g000000WGLNEA4,L-000453,,,Norfolk,,,36.8507689,-76.2858726,,,FALSE,https://www.artofliving.org/us-en/node/8793
+a0C1g000000WGLOEA4,L-000454,,,Chesapeake,,,36.7682088,-76.2874927,,,FALSE,https://www.artofliving.org/us-en/node/8794
+a0C1g000000WGLPEA4,L-000455,,,Newport News,,,37.0870821,-76.4730122,,,FALSE,https://www.artofliving.org/us-en/node/8795
+a0C1g000000WGLQEA4,L-000456,,3165 Clarke Drive,Virginia Beach,,23456,36.8529263,-75.977985,,,FALSE,https://www.artofliving.org/us-en/node/8796
+a0C1g000000WGLREA4,L-000457,,,,,,43.7844397,-88.7878678,,,FALSE,https://www.artofliving.org/us-en/node/8798
+a0C1g000000WGLSEA4,L-000458,,3392 Village Dr.,Castro Valley,,94546,37.6965951,-122.0778857,,,FALSE,https://www.artofliving.org/us-en/node/8801
+a0C1g000000WGLTEA4,L-000459,,,Baltimore,,,39.2903848,-76.6121893,,,FALSE,https://www.artofliving.org/us-en/node/8804
+a0C1g000000WGLUEA4,L-000460,,20344 Via Botticelli,North Ridge,,91326,34.297423,-118.577193,,,FALSE,https://www.artofliving.org/us-en/node/8805
+a0C1g000000WGLVEA4,L-000461,,20344 Via Botticelli,,,91326,34.297423,-118.577193,,,FALSE,https://www.artofliving.org/us-en/node/8806
+a0C1g000000WGLWEA4,L-000462,,"1070 Methven Ct,",Herndon,,20170,39.006655,-77.364865,,,FALSE,https://www.artofliving.org/us-en/node/8807
+a0C1g000000WGLXEA4,L-000463,,500 W. Middlefield Road,Mountain View,,94043,37.4015155,-122.0705509,,,FALSE,https://www.artofliving.org/us-en/node/8809
+a0C1g000000WGLYEA4,L-000464,,2055 Gervais Dr,McLean / Falls Church,,22043,38.9063,-77.181079,,,FALSE,https://www.artofliving.org/us-en/node/8810
+a0C1g000000WGLZEA4,L-000465,,600 Valley Way,Milpitas,,95035,37.427604,-121.915219,,,FALSE,https://www.artofliving.org/us-en/node/8811
+a0C1g000000WGLaEAO,L-000466,,"1404 W. Walnut Hill, Suite #104",Irving,,75038,32.8839078,-96.9735818,,,FALSE,https://www.artofliving.org/us-en/node/8813
+a0C1g000000WGLbEAO,L-000467,,1204 Pinhorn Drive,Bridgewater,,8807,40.580486,-74.663878,,,FALSE,https://www.artofliving.org/us-en/node/8817
+a0C1g000000WGLcEAO,L-000468,"3451 Foothill Road, Room #204",Poinsettia Pavilion,Ventura,,93003,34.2985355,-119.2204548,,,FALSE,https://www.artofliving.org/us-en/node/8818
+a0C1g000000WGLdEAO,L-000469,,3996 RT 516 STE 110,Matawan,,7747,40.4293975,-74.2456768,,,FALSE,https://www.artofliving.org/us-en/node/8819
+a0C1g000000WGLeEAO,L-000470,,,Lansing,,,42.732535,-84.5555347,,,FALSE,https://www.artofliving.org/us-en/node/8820
+a0C1g000000WGLfEAO,L-000471,,2067 Swensberg Ave NE,Grand Rapids,,49505,43.0008794,-85.6635654,,,FALSE,https://www.artofliving.org/us-en/node/8821
+a0C1g000000WGLgEAO,L-000472,,11133 Sycamore Hills,Fort Wayne,,46814,41.0672819,-85.2947209,,,FALSE,https://www.artofliving.org/us-en/node/8825
+a0C1g000000WGLhEAO,L-000473,,4 Westgate Drive,Woburn,,1801,42.4988123,-71.1679743,,,FALSE,https://www.artofliving.org/us-en/node/8826
+a0C1g000000WGLiEAO,L-000474,,"1 Lucas Ln,",Voorhees,,8043,39.842554,-74.996212,,,FALSE,https://www.artofliving.org/us-en/node/8829
+a0C1g000000WGLjEAO,L-000475,,6112 River Road,Bethesda,,20817,38.973601,-77.123762,,,FALSE,https://www.artofliving.org/us-en/node/8830
+a0C1g000000WGLkEAO,L-000476,,,Menlo Park,,,37.4538274,-122.1821871,,,FALSE,https://www.artofliving.org/us-en/node/8831
+a0C1g000000WGLlEAO,L-000477,,7 Pine Grove Way,Falmouth,,4105,43.7161536,-70.2290563,,,FALSE,https://www.artofliving.org/us-en/node/8832
+a0C1g000000WGLmEAO,L-000478,Suite C,"126, South Coronado Drive",Sierra Vista,,85635,31.5533768,-110.2781547,,,FALSE,https://www.artofliving.org/us-en/node/18000
+a0C1g000000WGLnEAO,L-000479,,"#4-20, Towne Center Drive",North Brunswick,,8902,40.452088,-74.502414,,,FALSE,https://www.artofliving.org/us-en/node/18001
+a0C1g000000WGLoEAO,L-000480,,3 Devine Ave,Syosset,,11791,40.8203848,-73.5024344,,,FALSE,https://www.artofliving.org/us-en/node/27390
+a0C1g000000WGLpEAO,L-000481,#104,4517 Pinta Lane,Virginia Beach,,23462,36.8392326,-76.1327613,,,FALSE,https://www.artofliving.org/us-en/node/49573
+a0C1g000000WGLqEAO,L-000482,,,Sioux Falls,,,43.5445959,-96.7311034,,,FALSE,https://www.artofliving.org/us-en/node/50969
+a0C1g000000WGLrEAO,L-000483,,1415 Pulaski Highway,Newark,,19702,39.624947,-75.679924,,,FALSE,https://www.artofliving.org/us-en/node/66655
+a0C1g000000WGLsEAO,L-000484,,12650 sw 5th St Beaverton,Beaverton,,97005,45.4834708,-122.8075383,,,FALSE,https://www.artofliving.org/us-en/node/67815
+a0C1g000000WGLtEAO,L-000485,,,Prescott,,86301,34.5400242,-112.4685025,,,FALSE,https://www.artofliving.org/us-en/node/71611
+a0C1g000000WGLuEAO,L-000486,,,Cottonwood,,86326,34.7391876,-112.0098791,,,FALSE,https://www.artofliving.org/us-en/node/71612
+a0C1g000000WGLvEAO,L-000487,,186 Stony Brook Rd,Fishkill,,12524,41.5390117,-73.8783992,,,FALSE,https://www.artofliving.org/us-en/node/77510
+a0C1g000000WGLwEAO,L-000488,Heritage Village Apartments Rental Office,101 Steuben Dr.,Guilderland,,12084,42.6919519,-73.8880073,,,FALSE,https://www.artofliving.org/us-en/node/85918
+a0C1g000000WGLxEAO,L-000489,,2279 S Sweetbriar Court,Bloomington,,47401,39.140336,-86.524981,,,FALSE,https://www.artofliving.org/us-en/node/86902
+a0C1g000000WGLyEAO,L-000490,Secaucus Senior Center,101 Center Ave,Secaucus,,7094,40.7887441,-74.0582107,,,FALSE,https://www.artofliving.org/us-en/node/107094
+a0C1g000000WGLzEAO,L-000491,,1900 Tree Top Ln,Vestavia,,35216,33.4355527,-86.7926218,,,FALSE,https://www.artofliving.org/us-en/node/107242
+a0C1g000000WGM0EAO,L-000492,,,Knoxville,,,35.9606384,-83.9207392,,,FALSE,https://www.artofliving.org/us-en/node/182501
+a0C1g000000WGM1EAO,L-000493,,1901 Providence Ln.,Springfield,,62711,39.776395,-89.7244771,,,FALSE,https://www.artofliving.org/us-en/node/182507
+a0C1g000000WGM2EAO,L-000494,,2917 Six Mile Lane,Louisville,,40220,38.2011892,-85.5899575,,,FALSE,https://www.artofliving.org/us-en/node/204613
+a0C1g000000WGM3EAO,L-000495,Suite 103,347 Elizabeth Ave,Somerset,,8873,40.5115818,-74.5467347,,,FALSE,https://www.artofliving.org/us-en/node/212827
+a0C1g000000WGM4EAO,L-000496,,"870 Vine Street, Apt #22,",Chattanooga,,37403,35.0446132,-85.2918303,,,FALSE,https://www.artofliving.org/us-en/node/214347
+a0C1g000000WGM5EAO,L-000497,,,Syracuse,,,43.0481221,-76.1474244,,,FALSE,https://www.artofliving.org/us-en/node/233620
+a0C1g000000WGM6EAO,L-000498,,,Blacksburg,,,37.2295733,-80.4139393,,,FALSE,https://www.artofliving.org/us-en/node/281395
+a0C1g000000WGM7EAO,L-000499,,Tampa Bay,"16326 Gulf Blvd Unit 506 Redington Beach,",,33708,27.813029,-82.81882,,,FALSE,https://www.artofliving.org/us-en/node/288076
+a0C1g000000WGM8EAO,L-000500,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/293298
+a0C1g000000WGM9EAO,L-000501,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/293299
+a0C1g000000WGMAEA4,L-000502,,,Horsham,,,40.1784422,-75.1285061,,,FALSE,https://www.artofliving.org/us-en/node/352313
+a0C1g000000WGMBEA4,L-000503,,691 N Kensington Way,Porterville,,93257,36.078852,-119.068734,,,FALSE,https://www.artofliving.org/node/360249
+a0C1g000000WGMSEA4,L-000504,,2264 Quimby Rd,San Jose,,95135,37.3211513,-121.8089147,,,FALSE,https://www.artofliving.org/us-en/node/381330
+a0C1g000000WGMTEA4,L-000505,,"1 Lucas Ln,",Voorhees,,8043,39.842554,-74.996212,,,FALSE,https://www.artofliving.org/us-en/node/381489
+a0C1g000000WGMUEA4,L-000506,,"19 Rawson Circle, Asbury Park",,,7712,40.2543668,-74.0538138,,,FALSE,https://www.artofliving.org/us-en/node/381490
+a0C1g000000WGMVEA4,L-000507,,23 Arrivo drive,Mission Viejo,,92692,33.5953608,-117.6464414,,,FALSE,https://www.artofliving.org/us-en/node/401700
+a0C1g000000WGMWEA4,L-000508,,"3058 Blondell Pl,",Thousand Oaks,,91320,34.1635997,-118.9421028,,,FALSE,https://www.artofliving.org/us-en/node/402573
+a0C1g000000WGMXEA4,L-000509,,412 NewComen Rd,Exton,,19341,40.049829,-75.6267219,,,FALSE,https://www.artofliving.org/us-en/node/405953
+a0C1g000000WGMYEA4,L-000510,,691 N Kensington Way,Porterville,,93257,36.078852,-119.068734,,,FALSE,https://www.artofliving.org/us-en/node/407034
+a0C1g000000WGMZEA4,L-000511,,574 Kernberry Dr,San Rafael,,94903,38.030795,-122.554383,,,FALSE,https://www.artofliving.org/us-en/node/423631
+a0C1g000000WGMaEAO,L-000512,,2704 Pheasant Run,Monmouth Junction,,8852,40.372685,-74.5752402,,,FALSE,https://www.artofliving.org/us-en/node/426789
+a0C1g000000WGMbEAO,L-000513,,2706 Whitfield Rd,Chapel Hill,,27514,35.9718183,-79.0549947,,,FALSE,https://www.artofliving.org/us-en/node/428748
+a0C1g000000WGMcEAO,L-000514,,Main St,Longmont,,80501,40.1815208,-105.1023996,,,FALSE,https://www.artofliving.org/us-en/node/452963
+a0C1g000000WGMdEAO,L-000515,,10110 Oakton Dr,Oakton,,22124,38.88116,-77.294341,,,FALSE,https://www.artofliving.org/us-en/node/455998
+a0C1g000000WGMeEAO,L-000516,,5 Sprague St,Chesterfield,,8515,40.139412,-74.6617629,,,FALSE,https://www.artofliving.org/us-en/node/462183
+a0C1g000000WGMfEAO,L-000517,,5739 Hydrangea circle,Sarasota,,34238,27.2539336,-82.4536873,,,FALSE,https://www.artofliving.org/us-en/node/484355
+a0C1g000000WGMgEAO,L-000518,,4000 Bearcat Way #102,Morrisville,,27560,35.8275553,-78.8214111,,,FALSE,https://www.artofliving.org/us-en/node/492376
+a0C1g000000WGMhEAO,L-000519,,1301 N Quail Terrace,Rogers,,72756,36.347835,-94.171661,,,FALSE,https://www.artofliving.org/us-en/node/510703
+a0C1g000000WGMiEAO,L-000520,,15100 Enterprise Ct #300,Chantilly,,20151,38.9069089,-77.4687108,,,FALSE,https://www.artofliving.org/us-en/node/510906
+a0C1g000000WGMjEAO,L-000521,,8 Luft Lane,West Orange,,7052,40.8209389,-74.2684595,,,FALSE,https://www.artofliving.org/us-en/node/511849
+a0C1g000000WGMkEAO,L-000522,Suite 2C,7071 W. commercial Blvd.,Tamarac,,33319,26.1939402,-80.2460268,,,FALSE,https://www.artofliving.org/us-en/node/514455
+a0C1g000000WGMlEAO,L-000523,,47519 Coldspring Place,Sterling,,20165,39.0350279,-77.353709,,,FALSE,https://www.artofliving.org/us-en/node/526327
+a0C1g000000WGMmEAO,L-000524,,219 Park Avenue,Scotch Plains,,7076,40.653885,-74.402118,,,FALSE,https://www.artofliving.org/us-en/node/526328
+a0C1g000000WGMnEAO,L-000525,,1809 Tahlequah Dr.,Edmond,,73013,35.635444,-97.432998,,,FALSE,https://www.artofliving.org/us-en/node/529749
+a0C1g000000WGMoEAO,L-000526,,36 Willow Rd,Summit,,7901,40.7193885,-74.337836,,,FALSE,https://www.artofliving.org/node/555878
+a0C1g000000WGMpEAO,L-000527,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/node/607648
+a0C1g000000WGMqEAO,L-000528,,3058 Blondell Pl,Thousand Oaks,,91320,34.1635997,-118.9421028,,,FALSE,https://www.artofliving.org/node/607649
+a0C1g000000WGMrEAO,L-000529,,1020 Hunakai Street,Honolulu,,96816,21.272197,-157.7893633,,,FALSE,https://www.artofliving.org/us-en/node/607650
+a0C1g000000WGMsEAO,L-000530,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/607742
+a0C1g000000WGMtEAO,L-000531,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/607743
+a0C1g000000WGMuEAO,L-000532,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/607744
+a0C1g000000WGMvEAO,L-000533,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/607745
+a0C1g000000WGMwEAO,L-000534,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/607754
+a0C1g000000WGMxEAO,L-000535,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/607755
+a0C1g000000WGMyEAO,L-000536,,,Eugene,,,,,,,FALSE,https://www.artofliving.org/us-en/node/612349
+a0C1g000000WGMzEAO,L-000537,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/613186
+a0C1g000000WGN0EAO,L-000538,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/us-en/node/613187
+a0C1g000000WGN1EAO,L-000539,,,Marlton,,8053,39.8912248,-74.9218324,,,FALSE,https://www.artofliving.org/node/622896
+a0C1g000000WGN2EAO,L-000540,,23428 Normandie Ave,Harbor City,,90710,33.8123151,-118.2978012,,,FALSE,https://www.artofliving.org/node/623160
+a0C1g000000WGN3EAO,L-000541,,2121 Euclid Avenue,Clevland,,44115,,,,,FALSE,https://www.artofliving.org/us-en/node/626936
+a0C1g000000WGN4EAO,L-000542,Santa Clara,"Safari Kid, 4995 Stevens Creek Blvd",,,95051,37.323315,-121.990215,,,FALSE,https://www.artofliving.org/us-en/node/631406
+a0C1g000000WGN5EAO,L-000543,,1895 Ridgeland Circle,Danville,,94526,37.790603,-121.983848,,,FALSE,https://www.artofliving.org/node/645149
+a0C1g000000WGN6EAO,L-000544,,4995 Stevens Creek Blvd,Santa Clara,,,37.3233149,-121.9902063,,,FALSE,https://www.artofliving.org/us-en/node/656424
+a0C1g000000WGN7EAO,L-000545,,8488 Baltimore national pike,Ellicott City,,20175,39.2855957,-76.808445,,,FALSE,https://www.artofliving.org/node/658259
+a0C1g000000WGN8EAO,L-000546,,144 Candlewyck Drive,Avondale,,19311,39.8251175,-75.7303802,,,FALSE,https://www.artofliving.org/node/663732
+a0C1g000000WhUfEAK,L-000548,,,Jaipur,,,26.92207,75.778885,,,TRUE,https://www.artofliving.org/us-en/node/8777
+a0C1g000000zKJREA2,L-000549,,26 Greysilk Court,San Ramon,,94582,,,,,FALSE,https://www.artofliving.org/us-en/node/709035
+a0C1g000000zKJWEA2,L-000550,,"2 14th Street, 1124",Hoboken,,7030,40.75315,-74.02491,,,FALSE,https://www.artofliving.org/us-en/node/730191
+a0C1g000001yBDVEA2,L-000551,,1 Clarendon ct West Windsor NJ 08550,West Windsor,,NJ 08550,40.2882673,-74.6096702,,,FALSE,https://www.artofliving.org/node/768639
+a0C1g000001yBDWEA2,L-000552,,1 Clarendon ct West Windsor NJ 08550,West Windsor,,NJ 08550,40.2882673,-74.6096702,,,FALSE,https://www.artofliving.org/node/768640
+a0C1g000001yBDXEA2,L-000553,,1 Clarendon ct West Windsor NJ 08550,West Windsor,,NJ 08550,40.2882673,-74.6096702,,,FALSE,https://www.artofliving.org/node/768641
+a0C1g000001yBDYEA2,L-000554,,1 Clarendon ct West Windsor NJ 08550,West Windsor,,NJ 08550,40.2882673,-74.6096702,,,FALSE,https://www.artofliving.org/node/768642
+a0C1g000001yBDZEA2,L-000555,,1 Clarendon ct West Windsor NJ 08550,West Windsor,,NJ 08550,40.2882673,-74.6096702,,,FALSE,https://www.artofliving.org/node/768643
+a0C1g000001yBDaEAM,L-000556,,1 Clarendon ct West Windsor NJ 08550,West Windsor,,NJ 08550,40.2882673,-74.6096702,,,FALSE,https://www.artofliving.org/node/768644
+a0C1g000001yBDbEAM,L-000557,,1 Clarendon ct West Windsor NJ 08550,West Windsor,,NJ 08550,40.2882673,-74.6096702,,,FALSE,https://www.artofliving.org/node/768645
+a0C1g000002DDXREA4,L-000559,1032 Stelton Road (Unit 103),Art of Living Meditation and Yoga Studio,Piscataway,,8854,40.5514014,-74.4330066,,,FALSE,https://www.artofliving.org/us-en/node/786816
+a0C1g000002DFX5EAO,L-000561,,,,,,,,,,FALSE,
+a0C1g000002DFXPEA4,L-000565,,,,,,,,,,FALSE,
+a0C1g000002DFXtEAO,L-000571,,,,,,,,,,FALSE,
+a0C1g000002DKGOEA4,L-000580,,,,,,,,,,FALSE,
+a0C1g000002DKGTEA4,L-000581,,,,,,,,,,FALSE,
+a0C1g000002DKGYEA4,L-000582,,,,,,,,,,FALSE,
+a0C1g000002DKGiEAO,L-000584,,,,,,,,,,FALSE,
+a0C1g000002DKHMEA4,L-000586,,,,,,37.09024,-95.712891,,,FALSE,https://www.artofliving.org/mm-en/node/789232
+a0C1g000002DdjJEAS,L-000589,,,,,,,,,,FALSE,
+a0C1g000002E9FXEA0,L-000590,,,,,,,,,,FALSE,
+a0C1g000002E9FcEAK,L-000591,,,,,,,,,,FALSE,
+a0C1g00000DtIaMEAV,L-000592,,,,,,,,,,FALSE,
+a0C1g00000NKMYjEAP,L-000593,,,,,,,,,,FALSE,
+a0C1g00000NKMYoEAP,L-000594,,,,,,,,,,FALSE,
+a0C1g00000NKMYyEAP,L-000596,,,,,,,,,,FALSE,
+a0C1g00000NKMZ3EAP,L-000597,,,,,,,,,,FALSE,
+a0C1g00000NKMZDEA5,L-000598,,,,,,,,,,FALSE,
+a0C1g00000NKMZIEA5,L-000599,,,,,,,,,,FALSE,
+a0C1g00000iXacoEAC,L-000600,,,,,,,,,,FALSE,
+a0CDZ00000jP3DL2A0,L-000603,,,,,,,,,,FALSE,
+a0CDZ00000jP3DQ2A0,L-000604,,,,,,,,,,FALSE,
+a0CDZ00000jSbfP2AS,L-000601,,,,,,,,,,FALSE,
+a0CDZ00000jSbfQ2AS,L-000602,,,,,,22,33,,,FALSE,
+a0CVZ00000Gq43C2AR,L-000605,1,2,Coimbatore,,234567,,,,,FALSE,
+a0CVZ00000S7k1C2AR,L-000606,Test,,Coimbatore,,,,,,InPerson,FALSE,
+a0CVZ00000S7qNh2AJ,L-000607,,,,,,,,,InPerson,FALSE,
+a0CVZ00000SA9LI2A1,L-000609,TT,,AA,,,,,,InPerson,FALSE,
+a0CVZ00000SAA8R2AX,L-000608,Test,,Coimbatore,,,,,,InPerson,FALSE,
+a0CVZ00000SGhgq2AD,L-000610,Test1,,A,,,,,,InPerson,FALSE,
+a0CVZ00000Swl9u2AB,L-000611,Test,,AC,,,,,,InPerson,FALSE,
+a0CVZ00000TeFPS2A3,L-000612,,,,,,,,,InPerson,FALSE,
+a0CVZ00000dO66F2AS,L-000613,Test,1,AA,,,,,,InPerson,FALSE,
+a0CVZ00000nnVck2AE,L-000614,test,,vv,,,,,,InPerson,FALSE,
+a0CVZ00000ocLJd2AM,L-000615,center,,,,,,,,InPerson,FALSE,
+a0CVZ00000ocUpt2AE,L-000616,Test 1,,,,,,,,InPerson,FALSE,
+a0CVZ00000rLTGk2AO,L-000617,Location 1,,,,,,,,InPerson,FALSE,
+a0CVZ00000x6RtC2AU,L-000618,test,,,,,,,,InPerson,FALSE,
+a0CVZ00000x99iV2AQ,L-000619,Test,,,,,,,,InPerson,FALSE,
+a0CVZ00000yizk42AA,L-000621,aa,,,,,,,,InPerson,FALSE,
+a0CVZ00000yjFBd2AM,L-000620,test,,,,,,,,InPerson,FALSE,
+a0CVZ0000179WLw2AM,L-000622,testt,,,,,,,,InPerson,FALSE,
+a0CVZ000019N4di2AC,L-000623,Test 1,,,,,,,,InPerson,FALSE,
