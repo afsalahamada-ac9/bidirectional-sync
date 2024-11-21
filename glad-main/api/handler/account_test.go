@@ -14,6 +14,7 @@ import (
 
 	"sudhagar/glad/api/presenter"
 	"sudhagar/glad/entity"
+	"sudhagar/glad/pkg/common"
 
 	mock "sudhagar/glad/usecase/account/mock"
 
@@ -56,7 +57,7 @@ func Test_listAccounts(t *testing.T) {
 
 	client := &http.Client{}
 	req, _ := http.NewRequest(http.MethodGet, ts.URL, nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 	res, err := client.Do(req)
 	assert.Nil(t, err)
 	assert.Equal(t, http.StatusOK, res.StatusCode)
@@ -101,7 +102,7 @@ func Test_listAccounts(t *testing.T) {
 // 	req, _ := http.NewRequest(http.MethodPost,
 // 		ts.URL+"/v1/accounts",
 // 		bytes.NewReader(payloadBytes))
-// 	req.Header.Set(httpHeaderTenantID, tenantAlice)
+// 	req.Header.Set(common.HttpHeaderTenantID, tenantAlice)
 // 	req.Header.Set("Content-Type", "application/json")
 // 	res, err := client.Do(req)
 
@@ -114,7 +115,7 @@ func Test_listAccounts(t *testing.T) {
 // 	assert.Equal(t, payload.Content, tmpl.Content)
 // 	assert.Equal(t, payload.Username, tmpl.Username)
 // 	assert.Equal(t, payload.Type, tmpl.Type)
-// 	assert.Equal(t, tenantAlice, res.Header.Get(httpHeaderTenantID))
+// 	assert.Equal(t, tenantAlice, res.Header.Get(common.HttpHeaderTenantID))
 // }
 
 func Test_getAccount(t *testing.T) {
@@ -152,7 +153,7 @@ func Test_getAccount(t *testing.T) {
 	assert.Equal(t, tmpl.ID, d.ID)
 	assert.Equal(t, tmpl.Username, d.Username)
 	assert.Equal(t, tmpl.Type, d.Type)
-	// assert.Equal(t, tenantAlice.String(), res.Header.Get(httpHeaderTenantID))
+	// assert.Equal(t, tenantAlice.String(), res.Header.Get(common.HttpHeaderTenantID))
 }
 
 func Test_deleteAccount(t *testing.T) {

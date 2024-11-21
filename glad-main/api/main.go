@@ -19,6 +19,7 @@ import (
 
 	"sudhagar/glad/usecase/account"
 	"sudhagar/glad/usecase/center"
+	"sudhagar/glad/usecase/course"
 	"sudhagar/glad/usecase/tenant"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -61,6 +62,9 @@ func main() {
 	accountRepo := repository.NewAccountPGSQL(db)
 	accountService := account.NewService(accountRepo)
 
+	courseRepo := repository.NewCoursePGSQL(db)
+	courseService := course.NewService(courseRepo)
+
 	// contactRepo := repository.NewContactMySQL(db)
 	// contactService := contact.NewService(contactRepo)
 
@@ -76,8 +80,9 @@ func main() {
 	r := mux.NewRouter()
 	// handlers
 	n := negroni.New(
-		negroni.HandlerFunc(middleware.Cors),
 		negroni.HandlerFunc(middleware.Metrics(metricService)),
+		negroni.HandlerFunc(middleware.Cors),
+		negroni.HandlerFunc(middleware.AddDefaultTenant),
 		negroni.NewLogger(),
 	)
 	// center
@@ -88,6 +93,9 @@ func main() {
 
 	// account
 	handler.MakeAccountHandlers(r, *n, accountService)
+
+	// course
+	handler.MakeCourseHandlers(r, *n, courseService)
 
 	// contact
 	// handler.MakeContactHandlers(r, *n, contactService)

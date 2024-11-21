@@ -15,6 +15,7 @@ import (
 
 	"sudhagar/glad/api/presenter"
 	"sudhagar/glad/entity"
+	"sudhagar/glad/pkg/common"
 
 	mock "sudhagar/glad/usecase/label/mock"
 
@@ -60,7 +61,7 @@ func Test_listLabels(t *testing.T) {
 
 	client := &http.Client{}
 	req, _ := http.NewRequest(http.MethodGet, ts.URL, nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 
 	q := req.URL.Query()
 	q.Add("index", "0")
@@ -81,7 +82,7 @@ func Test_listLabels(t *testing.T) {
 	assert.Equal(t, label.TenantID, d[0].TenantID)
 	assert.Equal(t, label.Name, d[0].Name)
 	assert.Equal(t, label.Color, d[0].Color)
-	assert.Equal(t, tenantAlice.String(), res.Header.Get(httpHeaderTenantID))
+	assert.Equal(t, tenantAlice.String(), res.Header.Get(common.HttpHeaderTenantID))
 }
 
 func Test_createLabel(t *testing.T) {
@@ -120,7 +121,7 @@ func Test_createLabel(t *testing.T) {
 	req, _ := http.NewRequest(http.MethodPost,
 		ts.URL+"/v1/labels",
 		bytes.NewReader(payloadBytes))
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 	req.Header.Set("Content-Type", "application/json")
 	res, err := client.Do(req)
 
@@ -132,7 +133,7 @@ func Test_createLabel(t *testing.T) {
 	assert.Equal(t, id, label.ID)
 	assert.Equal(t, payload.Name, label.Name)
 	assert.Equal(t, payload.Color, label.Color)
-	assert.Equal(t, tenantAlice.String(), res.Header.Get(httpHeaderTenantID))
+	assert.Equal(t, tenantAlice.String(), res.Header.Get(common.HttpHeaderTenantID))
 }
 
 func Test_getLabel(t *testing.T) {
@@ -158,7 +159,7 @@ func Test_getLabel(t *testing.T) {
 	handler := getLabel(service)
 
 	req, _ := http.NewRequest("GET", "/v1/labels/"+label.ID.String(), nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 
 	r.Handle("/v1/labels/{id}", handler).Methods("GET", "OPTIONS")
 	rr := httptest.NewRecorder()
@@ -173,7 +174,7 @@ func Test_getLabel(t *testing.T) {
 	assert.Equal(t, label.ID, d.ID)
 	assert.Equal(t, label.Name, d.Name)
 	assert.Equal(t, label.Color, d.Color)
-	assert.Equal(t, tenantAlice.String(), rr.Header().Get(httpHeaderTenantID))
+	assert.Equal(t, tenantAlice.String(), rr.Header().Get(common.HttpHeaderTenantID))
 }
 
 func Test_deleteLabel(t *testing.T) {
@@ -192,13 +193,13 @@ func Test_deleteLabel(t *testing.T) {
 	handler := deleteLabel(service)
 
 	req, _ := http.NewRequest("DELETE", "/v1/labels/"+id.String(), nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 
 	r.Handle("/v1/labels/{id}", handler).Methods("DELETE", "OPTIONS")
 	rr := httptest.NewRecorder()
 	r.ServeHTTP(rr, req)
 	assert.Equal(t, http.StatusOK, rr.Code)
-	assert.Equal(t, tenantAlice.String(), rr.Header().Get(httpHeaderTenantID))
+	assert.Equal(t, tenantAlice.String(), rr.Header().Get(common.HttpHeaderTenantID))
 }
 
 func Test_deleteLabelNonExistent(t *testing.T) {
@@ -217,13 +218,13 @@ func Test_deleteLabelNonExistent(t *testing.T) {
 	handler := deleteLabel(service)
 
 	req, _ := http.NewRequest("DELETE", "/v1/labels/"+id.String(), nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 
 	r.Handle("/v1/labels/{id}", handler).Methods("DELETE", "OPTIONS")
 	rr := httptest.NewRecorder()
 	r.ServeHTTP(rr, req)
 	assert.Equal(t, http.StatusNotFound, rr.Code)
-	assert.Equal(t, tenantAlice.String(), rr.Header().Get(httpHeaderTenantID))
+	assert.Equal(t, tenantAlice.String(), rr.Header().Get(common.HttpHeaderTenantID))
 }
 
 // TODO: Test case for updating label

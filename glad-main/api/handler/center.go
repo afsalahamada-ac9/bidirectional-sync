@@ -12,6 +12,7 @@ import (
 	"net/http"
 	"strconv"
 
+	"sudhagar/glad/pkg/common"
 	"sudhagar/glad/usecase/center"
 
 	"sudhagar/glad/api/presenter"
@@ -22,17 +23,19 @@ import (
 	"github.com/gorilla/mux"
 )
 
-const (
-	httpHeaderTenantID   = "X-GLAD-TenantID"
-	httpHeaderTotalCount = "X-Total-Count"
-)
+// TODO:
+// 	1. Implement pagination for center listing/search
+// 	2. Check the values required in the response
+// 	3. JSON based search and formatting requires some work
+// 	4. ENUM can be optimized by storing integer value in the mapping
+// 	5. Support for location and geolocation
 
 func listCenters(service center.UseCase) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		errorMessage := "Error reading centers"
 		var data []*entity.Center
 		var err error
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		search := r.URL.Query().Get("search")
 
 		tenantID, err := entity.StringToID(tenant)
@@ -77,7 +80,7 @@ func listCenters(service center.UseCase) http.Handler {
 			})
 		}
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
-			w.Header().Set(httpHeaderTenantID, tenant)
+			w.Header().Set(common.HttpHeaderTenantID, tenant)
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte("Unable to encode center"))
 		}
@@ -93,7 +96,7 @@ func createCenter(service center.UseCase) http.Handler {
 			Mode  entity.CenterMode `json:"mode"`
 		}
 
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
@@ -127,7 +130,7 @@ func createCenter(service center.UseCase) http.Handler {
 			TenantID: tenantID,
 		}
 
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		w.WriteHeader(http.StatusCreated)
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			log.Println(err.Error())
@@ -168,7 +171,7 @@ func getCenter(service center.UseCase) http.Handler {
 			Mode:  data.Mode,
 		}
 
-		w.Header().Set(httpHeaderTenantID, data.TenantID.String())
+		w.Header().Set(common.HttpHeaderTenantID, data.TenantID.String())
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte("Unable to encode center"))
@@ -216,7 +219,7 @@ func updateCenter(service center.UseCase) http.Handler {
 		}
 
 		var input entity.Center
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
@@ -249,7 +252,7 @@ func updateCenter(service center.UseCase) http.Handler {
 			Mode:     input.Mode,
 		}
 
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		w.WriteHeader(http.StatusOK)
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			log.Println(err.Error())

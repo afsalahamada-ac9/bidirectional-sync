@@ -12,6 +12,7 @@ import (
 	"testing"
 
 	"sudhagar/glad/entity"
+	"sudhagar/glad/pkg/common"
 	mock "sudhagar/glad/usecase/labeler/mock"
 
 	"github.com/codegangsta/negroni"
@@ -54,13 +55,13 @@ func Test_SetLabel(t *testing.T) {
 			req, _ := http.NewRequest("PUT",
 				"/v1/contacts/label/"+contactIDAlpha.String()+"/"+labelIDPrimary.String(),
 				nil)
-			req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+			req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 
 			r.Handle("/v1/contacts/label/{contact_id}/{label_id}", handler).Methods("PUT", "OPTIONS")
 			rr := httptest.NewRecorder()
 			r.ServeHTTP(rr, req)
 			assert.Equal(subtest, tt.want, rr.Code)
-			assert.Equal(subtest, tenantAlice.String(), rr.Header().Get(httpHeaderTenantID))
+			assert.Equal(subtest, tenantAlice.String(), rr.Header().Get(common.HttpHeaderTenantID))
 
 		})
 	}
@@ -96,13 +97,13 @@ func Test_RemoveLabel(t *testing.T) {
 			req, _ := http.NewRequest("DELETE",
 				"/v1/contacts/label/"+contactIDAlpha.String()+"/"+labelIDPrimary.String(),
 				nil)
-			req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+			req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 
 			r.Handle("/v1/contacts/label/{contact_id}/{label_id}", handler).Methods("DELETE", "OPTIONS")
 			rr := httptest.NewRecorder()
 			r.ServeHTTP(rr, req)
 			assert.Equal(subtest, tt.want, rr.Code)
-			assert.Equal(subtest, tenantAlice.String(), rr.Header().Get(httpHeaderTenantID))
+			assert.Equal(subtest, tenantAlice.String(), rr.Header().Get(common.HttpHeaderTenantID))
 		})
 	}
 }

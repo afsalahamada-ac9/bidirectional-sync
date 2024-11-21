@@ -4,10 +4,8 @@
  * This code may not be used, copied, modified, or distributed without explicit permission.
  */
 
-package handler
+package common
 
 const (
-	apiQueryParamKeyIndex string = "index"
-	apiQueryParamKeyLimit string = "limit"
-	httpHeaderTotalCount         = "X-Total-Count"
+	HttpHeaderTenantID = "X-GLAD-TenantID"
 )

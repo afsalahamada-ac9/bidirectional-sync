@@ -11,6 +11,7 @@ import (
 	"net/http"
 	"strconv"
 
+	"sudhagar/glad/pkg/common"
 	"sudhagar/glad/usecase/contact"
 
 	"sudhagar/glad/api/presenter"
@@ -31,7 +32,7 @@ func listContacts(service contact.UseCase) http.Handler {
 		errorMessage := "Error reading contacts"
 		var data []*entity.Contact
 		var err error
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
@@ -80,7 +81,7 @@ func listContacts(service contact.UseCase) http.Handler {
 			return
 		}
 		w.Header().Set(httpHeaderTotalCount, strconv.Itoa(total))
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 
 		var toJ []*presenter.Contact
 		for _, d := range data {
@@ -93,7 +94,7 @@ func listContacts(service contact.UseCase) http.Handler {
 			})
 		}
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
-			w.Header().Set(httpHeaderTenantID, tenant)
+			w.Header().Set(common.HttpHeaderTenantID, tenant)
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte("Unable to encode contact"))
 		}

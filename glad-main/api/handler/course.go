@@ -12,6 +12,7 @@ import (
 	"net/http"
 	"strconv"
 
+	"sudhagar/glad/pkg/common"
 	"sudhagar/glad/usecase/course"
 
 	"sudhagar/glad/api/presenter"
@@ -22,14 +23,12 @@ import (
 	"github.com/gorilla/mux"
 )
 
-const ()
-
 func listCourses(service course.UseCase) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		errorMessage := "Error reading courses"
 		var data []*entity.Course
 		var err error
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		search := r.URL.Query().Get("search")
 
 		tenantID, err := entity.StringToID(tenant)
@@ -74,7 +73,7 @@ func listCourses(service course.UseCase) http.Handler {
 			})
 		}
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
-			w.Header().Set(httpHeaderTenantID, tenant)
+			w.Header().Set(common.HttpHeaderTenantID, tenant)
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte("Unable to encode course"))
 		}
@@ -97,7 +96,7 @@ func createCourse(service course.UseCase) http.Handler {
 			// TODO: Organizer, Teacher, Contact, Notify, etc
 		}
 
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
@@ -138,7 +137,7 @@ func createCourse(service course.UseCase) http.Handler {
 			TenantID: tenantID,
 		}
 
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		w.WriteHeader(http.StatusCreated)
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			log.Println(err.Error())
@@ -179,7 +178,7 @@ func getCourse(service course.UseCase) http.Handler {
 			// TODO: More fields to be added
 		}
 
-		w.Header().Set(httpHeaderTenantID, data.TenantID.String())
+		w.Header().Set(common.HttpHeaderTenantID, data.TenantID.String())
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte("Unable to encode course"))
@@ -227,7 +226,7 @@ func updateCourse(service course.UseCase) http.Handler {
 		}
 
 		var input entity.Course
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
@@ -259,7 +258,7 @@ func updateCourse(service course.UseCase) http.Handler {
 			Name:     input.Name,
 		}
 
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		w.WriteHeader(http.StatusOK)
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			log.Println(err.Error())

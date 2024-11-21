@@ -10,6 +10,7 @@ import (
 	"log"
 	"net/http"
 	"sudhagar/glad/entity"
+	"sudhagar/glad/pkg/common"
 	"sudhagar/glad/usecase/labeler"
 
 	"github.com/codegangsta/negroni"
@@ -20,7 +21,7 @@ func setLabel(service labeler.UseCase) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		errorMessage := "Error setting label"
 		var err error
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
@@ -45,7 +46,7 @@ func setLabel(service labeler.UseCase) http.Handler {
 		}
 
 		err = service.SetLabel(tenantID, contactID, labelID)
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		if err != nil {
 			log.Println(err.Error())
 			w.WriteHeader(http.StatusInternalServerError)
@@ -61,7 +62,7 @@ func removeLabel(service labeler.UseCase) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		errorMessage := "Error removing label"
 		var err error
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
@@ -86,7 +87,7 @@ func removeLabel(service labeler.UseCase) http.Handler {
 		}
 
 		err = service.RemoveLabel(tenantID, contactID, labelID)
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		if err != nil {
 			log.Println(err.Error())
 			w.WriteHeader(http.StatusInternalServerError)

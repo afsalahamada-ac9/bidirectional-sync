@@ -16,14 +16,14 @@ type Record struct {
 	Id                   string   `csv:"Id"`
 	Name                 string   `csv:"Name"`
 	StreetAddress1       string   `csv:"Street_Address_1__c"`
-	StreetAddress2       *string  `csv:"Street_Address_2__c"`      // Pointer to handle optional field
-	City                 *string  `csv:"City__c"`                  // Pointer to handle optional field
-	State                *string  `csv:"State__c"`                 // Pointer to handle optional field
-	PostalOrZipCode      *string  `csv:"Postal_Or_Zip_Code__c"`    // Pointer to handle optional field
-	GeolocationLatitude  *float64 `csv:"Geolocation__c.latitude"`  // Pointer to handle optional field
-	GeolocationLongitude *float64 `csv:"Geolocation__c.longitude"` // Pointer to handle optional field
-	MaxCapacity          *int     `csv:"Max_Capacity__c"`          // Pointer to handle optional field
-	CenterMode           *string  `csv:"Center_Mode__c"`           // Pointer to handle optional field
+	StreetAddress2       *string  `csv:"Street_Address_2__c"`
+	City                 *string  `csv:"City__c"`
+	State                *string  `csv:"State__c"`
+	PostalOrZipCode      *string  `csv:"Postal_Or_Zip_Code__c"`
+	GeolocationLatitude  *float64 `csv:"Geolocation__c.latitude"`
+	GeolocationLongitude *float64 `csv:"Geolocation__c.longitude"`
+	MaxCapacity          *int     `csv:"Max_Capacity__c"`
+	CenterMode           *string  `csv:"Center_Mode__c"`
 	IsNationalCenter     bool     `csv:"Is_National_Center__c"`
 	CenterURL            string   `csv:"Center_URL__c"`
 }

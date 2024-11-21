@@ -9,12 +9,20 @@
 package config
 
 const (
-	DB_USER                = "glad_user"
-	DB_PASSWORD            = "glad1234"
-	DB_DATABASE            = "glad"
-	DB_HOST                = "127.0.0.1"
-	DB_PORT                = 5432 /* 3306 for MySQL */
-	DB_SSLMODE             = "require"
-	API_PORT               = 8080
+	// Database
+	DB_USER     = "glad_user"
+	DB_PASSWORD = "glad1234"
+	DB_DATABASE = "glad"
+	DB_HOST     = "127.0.0.1"
+	DB_PORT     = 5432 /* 3306 for MySQL */
+	DB_SSLMODE  = "require"
+
+	// Defaults
+	DEFAULT_TENANT = ""
+
+	// API port
+	API_PORT = 8080
+
+	// Metrics
 	PROMETHEUS_PUSHGATEWAY = "http://localhost:9091/"
 )

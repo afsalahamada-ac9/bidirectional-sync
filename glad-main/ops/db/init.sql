@@ -42,18 +42,20 @@ CREATE TABLE IF NOT EXISTS tenant (
     -- TODO: Name need not be unique, but name and country together must be unique
     name VARCHAR(255) NOT NULL UNIQUE,
     country VARCHAR(128) NOT NULL,
+    is_default BOOLEAN UNIQUE DEFAULT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 CREATE INDEX idx_tenant_name ON tenant(name);
+CREATE INDEX idx_tenant_country ON tenant(country);
 
 -- CENTER entity
 CREATE TABLE IF NOT EXISTS center (
     id SERIAL PRIMARY KEY,
     -- Note: ext_id is salesforce id
     ext_id VARCHAR(32) NOT NULL UNIQUE,
-    -- TODO: tenant_id BIGINT NOT NULL REFERENCES tenant(id), -- ON DELETE RESTRICT, 
-    -- (Note: Do not want to delete tenant if center exists; maybe we can set to NULL as an alternate choice)
+    -- Note: Do not want to delete tenant if center exists
+    tenant_id BIGINT NOT NULL REFERENCES tenant(id),
 
     -- Note: 'name' is needed in SalesForce. Set as 'L-<id>'
     center_name VARCHAR(80) NOT NULL,
@@ -74,6 +76,7 @@ CREATE TABLE IF NOT EXISTS center (
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 CREATE INDEX idx_center_ext_id ON center(ext_id);
+CREATE INDEX idx_center_tenant_id ON center(tenant_id);
 CREATE INDEX idx_center_center_name ON center(center_name);
 
 CREATE TABLE IF NOT EXISTS center_contact (
@@ -91,9 +94,12 @@ CREATE TABLE IF NOT EXISTS course (
     -- Note: ext_id is salesforce id
     -- When course is created outside of salesforce, ext_id will be NULL
     ext_id VARCHAR(32) UNIQUE,
+
     -- TODO: What's CType ID? How is it used?
-    -- TODO: tenant_id BIGINT NOT NULL REFERENCES tenant(id), -- ON DELETE RESTRICT, 
-    -- (Note: Do not want to delete tenant if course exists; maybe we can set to NULL as an alternate choice)
+
+    -- Note: Do not want to delete tenant if course exists
+    tenant_id BIGINT NOT NULL REFERENCES tenant(id),
+
     name VARCHAR(128) NOT NULL,
     notes VARCHAR(1024), -- TODO: check the size of this column
     status course_status NOT NULL DEFAULT 'draft',
@@ -109,7 +115,7 @@ CREATE TABLE IF NOT EXISTS course (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
--- CREATE INDEX idx_course_tenant_id ON course(tenant_id);
+CREATE INDEX idx_course_tenant_id ON course(tenant_id);
 CREATE INDEX idx_course_ext_id ON course(ext_id);
 
 -- ACCOUNT entity
@@ -117,8 +123,9 @@ CREATE TABLE IF NOT EXISTS account (
     id BIGSERIAL PRIMARY KEY,
     -- Note: ext_id is salesforce id
     ext_id VARCHAR(32) NOT NULL UNIQUE,
-    -- TODO: tenant_id BIGINT NOT NULL REFERENCES tenant(id), -- ON DELETE RESTRICT, 
-    -- (Note: Do not want to delete tenant if course exists; maybe we can set to NULL as an alternate choice)
+
+    -- Note: Do not want to delete tenant if course exists
+    tenant_id BIGINT NOT NULL REFERENCES tenant(id),
 
     -- Note: username is to link the account with the logged in user
     username VARCHAR(128) NOT NULL,
@@ -133,7 +140,7 @@ CREATE TABLE IF NOT EXISTS account (
     -- Q: Is it unique? How about kids' account?
     -- UNIQUE(tenant_id, username)
 );
--- CREATE INDEX idx_account_tenant_id ON account(tenant_id);
+CREATE INDEX idx_account_tenant_id ON account(tenant_id);
 CREATE INDEX idx_account_ext_id ON account(ext_id);
 CREATE INDEX idx_account_username ON account(username);
 CREATE INDEX idx_account_type ON account(type);
@@ -169,7 +176,9 @@ CREATE TABLE IF NOT EXISTS course_teacher (
 CREATE INDEX idx_course_teacher_course_id ON course_teacher(course_id);
 CREATE INDEX idx_course_teacher_teacher_id ON course_teacher(teacher_id);
 
+-- Note: Tenant is not required for course_timing
 CREATE TABLE IF NOT EXISTS course_timing (
+    id BIGSERIAL PRIMARY KEY,
     course_id BIGINT NOT NULL REFERENCES course(id) ON DELETE CASCADE,
     -- Note: ext_id is salesforce id
     ext_id VARCHAR(32) NOT NULL UNIQUE,
@@ -183,6 +192,7 @@ CREATE TABLE IF NOT EXISTS course_timing (
 CREATE INDEX idx_course_timings_course_id ON course_timing(course_id);
 CREATE INDEX idx_course_timing_ext_id ON course_timing(ext_id);
 
+-- Note: Tenant is not required for course_notify
 -- Notes: Notify is not mandatory for a course
 CREATE TABLE IF NOT EXISTS course_notify (
     course_id BIGINT NOT NULL REFERENCES course(id) ON DELETE CASCADE,

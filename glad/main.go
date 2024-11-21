@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	api "glad/api"
 	commonutils "glad/common"
 	utils "glad/pkg/utils"
@@ -9,6 +10,8 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgconn"
 )
 
 func main() {
@@ -40,10 +43,33 @@ func main() {
 			}
 		}
 	}()
-
+	conn, err := pgx.Connect(context.Background(), commonutils.GetFromEnv("CONNECTION_STRING"))
+	if err != nil {
+		log.Println("there was an error connecting to the database")
+	}
+	_, err = conn.Exec(context.Background(), "LISTEN events")
+	if err != nil {
+		log.Println("error listening to the channel")
+	}
+	log.Println("listening successful")
+	channel := make(chan *pgconn.Notification)
+	go func() {
+		log.Println("listener active")
+		for {
+			notification, err := conn.WaitForNotification(context.Background())
+			if err != nil {
+				log.Println("there was an error listening to the notification")
+				continue
+			}
+			channel <- notification
+		}
+	}()
+	for notification := range channel {
+		log.Println("received notification:", notification.Payload)
+	}
 	log.Println("database connection successful")
 	router := mux.NewRouter()
-	router.HandleFunc("/sendsf", api.SendDataToSf)
-	router.HandleFunc("/getsf", api.GetDataFromSf)
+	router.HandleFunc("/sendsf", api.SendDataToSf).Methods("POST")
+	router.HandleFunc("/getsf", api.GetDataFromSf).Methods("POST")
 	log.Println(http.ListenAndServe(":4000", router))
 }

@@ -15,6 +15,7 @@ import (
 
 	"sudhagar/glad/api/presenter"
 	"sudhagar/glad/entity"
+	"sudhagar/glad/pkg/common"
 
 	mock "sudhagar/glad/usecase/tenant/mock"
 
@@ -51,7 +52,7 @@ func Test_listTenants(t *testing.T) {
 
 	client := &http.Client{}
 	req, _ := http.NewRequest(http.MethodGet, ts.URL, nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 	res, err := client.Do(req)
 	assert.Nil(t, err)
 	assert.Equal(t, http.StatusOK, res.StatusCode)

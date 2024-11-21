@@ -15,6 +15,7 @@ import (
 
 	"sudhagar/glad/api/presenter"
 	"sudhagar/glad/entity"
+	"sudhagar/glad/pkg/common"
 
 	mock "sudhagar/glad/usecase/course/mock"
 
@@ -52,7 +53,7 @@ func Test_listCourses(t *testing.T) {
 
 	client := &http.Client{}
 	req, _ := http.NewRequest(http.MethodGet, ts.URL, nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 	res, err := client.Do(req)
 	assert.Nil(t, err)
 	assert.Equal(t, http.StatusOK, res.StatusCode)
@@ -74,7 +75,7 @@ func Test_listCourses_NotFound(t *testing.T) {
 	req, _ := http.NewRequest(http.MethodGet,
 		ts.URL+"?search=non-existent",
 		nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 	res, err := client.Do(req)
 	assert.Nil(t, err)
 	assert.Equal(t, http.StatusNotFound, res.StatusCode)
@@ -100,7 +101,7 @@ func Test_listCourses_Search(t *testing.T) {
 	req, _ := http.NewRequest(http.MethodGet,
 		ts.URL+"?search=default",
 		nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 	res, err := client.Do(req)
 
 	assert.Nil(t, err)
@@ -157,7 +158,7 @@ func Test_createCourse(t *testing.T) {
 	req, _ := http.NewRequest(http.MethodPost,
 		ts.URL+"/v1/courses",
 		bytes.NewReader(payloadBytes))
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 	req.Header.Set("Content-Type", "application/json")
 	res, err := client.Do(req)
 
@@ -170,7 +171,7 @@ func Test_createCourse(t *testing.T) {
 	assert.Equal(t, payload.ExtID, tmpl.ExtID)
 	assert.Equal(t, payload.Name, tmpl.Name)
 	assert.Equal(t, payload.CType, tmpl.CType)
-	assert.Equal(t, tenantAlice.String(), res.Header.Get(httpHeaderTenantID))
+	assert.Equal(t, tenantAlice.String(), res.Header.Get(common.HttpHeaderTenantID))
 }
 
 func Test_getCourse(t *testing.T) {
@@ -210,7 +211,7 @@ func Test_getCourse(t *testing.T) {
 	assert.Equal(t, tmpl.ExtID, d.ExtID)
 	assert.Equal(t, tmpl.Name, d.Name)
 	assert.Equal(t, tmpl.CType, d.CType)
-	assert.Equal(t, tenantAlice.String(), res.Header.Get(httpHeaderTenantID))
+	assert.Equal(t, tenantAlice.String(), res.Header.Get(common.HttpHeaderTenantID))
 }
 
 func Test_deleteCourse(t *testing.T) {

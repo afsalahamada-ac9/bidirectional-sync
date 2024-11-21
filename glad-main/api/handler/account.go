@@ -12,6 +12,7 @@ import (
 	"net/http"
 	"strconv"
 
+	"sudhagar/glad/pkg/common"
 	"sudhagar/glad/usecase/account"
 
 	"sudhagar/glad/api/presenter"
@@ -27,7 +28,7 @@ func listAccounts(service account.UseCase) http.Handler {
 		errorMessage := "Error reading accounts"
 		var data []*entity.Account
 		var err error
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
@@ -46,7 +47,7 @@ func listAccounts(service account.UseCase) http.Handler {
 
 		total := service.GetCount(tenantID)
 		w.Header().Set(httpHeaderTotalCount, strconv.Itoa(total))
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 
 		var toJ []*presenter.Account
 		for _, d := range data {
@@ -77,7 +78,7 @@ func listAccounts(service account.UseCase) http.Handler {
 // 			Content string             `json:"content"`
 // 		}
 
-// 		tenant := r.Header.Get(httpHeaderTenantID)
+// 		tenant := r.Header.Get(common.HttpHeaderTenantID)
 // 		tenantID, err := entity.StringToID(tenant)
 // 		if err != nil {
 // 			w.WriteHeader(http.StatusBadRequest)
@@ -111,7 +112,7 @@ func listAccounts(service account.UseCase) http.Handler {
 // 			TenantID: tenantID,
 // 		}
 
-// 		w.Header().Set(httpHeaderTenantID, tenant)
+// 		w.Header().Set(common.HttpHeaderTenantID, tenant)
 // 		w.WriteHeader(http.StatusCreated)
 // 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 // 			log.Println(err.Error())
@@ -151,7 +152,7 @@ func getAccount(service account.UseCase) http.Handler {
 			Type:      data.Type,
 		}
 
-		w.Header().Set(httpHeaderTenantID, r.Header.Get(httpHeaderTenantID))
+		w.Header().Set(common.HttpHeaderTenantID, r.Header.Get(common.HttpHeaderTenantID))
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte("Unable to encode account"))
@@ -189,7 +190,7 @@ func updateAccount(service account.UseCase) http.Handler {
 		username := vars["username"]
 
 		var input entity.Account
-		// tenant := r.Header.Get(httpHeaderTenantID)
+		// tenant := r.Header.Get(common.HttpHeaderTenantID)
 		// tenantID, err := entity.StringToID(tenant)
 		// if err != nil {
 		// 	w.WriteHeader(http.StatusBadRequest)
@@ -224,7 +225,7 @@ func updateAccount(service account.UseCase) http.Handler {
 			Type:      input.Type,
 		}
 
-		w.Header().Set(httpHeaderTenantID, "")
+		w.Header().Set(common.HttpHeaderTenantID, "")
 		w.WriteHeader(http.StatusOK)
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			log.Println(err.Error())

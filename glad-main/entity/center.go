@@ -11,11 +11,11 @@ import (
 )
 
 // Center mode
-type CenterMode int
+type CenterMode string
 
 const (
-	CenterInPerson CenterMode = iota
-	CenterOnline
+	CenterInPerson CenterMode = "in-person"
+	CenterOnline   CenterMode = "online"
 	// Add new types here
 )
 

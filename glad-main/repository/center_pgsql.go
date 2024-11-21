@@ -28,7 +28,7 @@ func NewCenterPGSQL(db *sql.DB) *CenterPGSQL {
 // Create creates a center
 func (r *CenterPGSQL) Create(e *entity.Center) (entity.ID, error) {
 	stmt, err := r.db.Prepare(`
-		INSERT INTO center (id, tenant_id, ext_id, name, location, geo_location, capacity, mode, webpage, is_national_center, created_at) 
+		INSERT INTO center (id, tenant_id, ext_id, center_name, location, geo_location, capacity, mode, webpage, is_national_center, created_at)
 		VALUES( $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`)
 	if err != nil {
 		return e.ID, err
@@ -41,7 +41,7 @@ func (r *CenterPGSQL) Create(e *entity.Center) (entity.ID, error) {
 		e.Location,    // TODO: to be converted into json
 		e.GeoLocation, // TODO: to be converted into json
 		e.Capacity,
-		int(e.Mode),
+		e.Mode,
 		e.WebPage,
 		e.IsNationalCenter,
 		time.Now().Format("2006-01-02"),
@@ -60,14 +60,15 @@ func (r *CenterPGSQL) Create(e *entity.Center) (entity.ID, error) {
 // Not all fields are required for v1
 func (r *CenterPGSQL) Get(id entity.ID) (*entity.Center, error) {
 	stmt, err := r.db.Prepare(`
-		SELECT id, tenant_id, ext_id, name, mode, created_at FROM center WHERE id = $1;`)
+		SELECT id, tenant_id, ext_id, center_name, mode, created_at FROM center WHERE id = $1;`)
 	if err != nil {
 		return nil, err
 	}
 	var c entity.Center
 	var ext_id sql.NullString
 	var name sql.NullString
-	err = stmt.QueryRow(id).Scan(&c.ID, &c.TenantID, &ext_id, &name, &c.Mode, &c.CreatedAt)
+	var mode sql.NullString
+	err = stmt.QueryRow(id).Scan(&c.ID, &c.TenantID, &ext_id, &name, &mode, &c.CreatedAt)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return nil, nil
@@ -76,6 +77,7 @@ func (r *CenterPGSQL) Get(id entity.ID) (*entity.Center, error) {
 	}
 	c.ExtID = ext_id.String
 	c.Name = name.String
+	c.Mode = entity.CenterMode(mode.String)
 
 	return &c, nil
 }
@@ -84,8 +86,8 @@ func (r *CenterPGSQL) Get(id entity.ID) (*entity.Center, error) {
 func (r *CenterPGSQL) Update(e *entity.Center) error {
 	e.UpdatedAt = time.Now()
 	_, err := r.db.Exec(`
-		UPDATE center SET name = $1, mode = $2, updated_at = $3 WHERE id = $4;`,
-		e.Name, int(e.Mode), e.UpdatedAt.Format("2006-01-02"), e.ID)
+		UPDATE center SET center_name = $1, mode = $2, updated_at = $3 WHERE id = $4;`,
+		e.Name, e.Mode, e.UpdatedAt.Format("2006-01-02"), e.ID)
 	if err != nil {
 		return err
 	}
@@ -97,7 +99,7 @@ func (r *CenterPGSQL) Search(tenantID entity.ID,
 	query string,
 ) ([]*entity.Center, error) {
 	stmt, err := r.db.Prepare(`
-		SELECT id, tenant_id, ext_id, name, mode, created_at FROM center
+		SELECT id, tenant_id, ext_id, center_name, mode, created_at FROM center
 		WHERE tenant_id = $1 AND name LIKE $2;`)
 	if err != nil {
 		return nil, err
@@ -110,14 +112,16 @@ func (r *CenterPGSQL) Search(tenantID entity.ID,
 
 	var ext_id sql.NullString
 	var name sql.NullString
+	var mode sql.NullString
 	for rows.Next() {
 		var c entity.Center
-		err = rows.Scan(&c.ID, &c.TenantID, &ext_id, &name, &c.Mode, &c.CreatedAt)
+		err = rows.Scan(&c.ID, &c.TenantID, &ext_id, &name, &mode, &c.CreatedAt)
 		if err != nil {
 			return nil, err
 		}
 		c.ExtID = ext_id.String
 		c.Name = name.String
+		c.Mode = entity.CenterMode(mode.String)
 		centers = append(centers, &c)
 	}
 
@@ -127,7 +131,7 @@ func (r *CenterPGSQL) Search(tenantID entity.ID,
 // List lists centers
 func (r *CenterPGSQL) List(tenantID entity.ID) ([]*entity.Center, error) {
 	stmt, err := r.db.Prepare(`
-		SELECT id, tenant_id, ext_id, name, mode, created_at FROM center WHERE tenant_id = $1;`)
+		SELECT id, tenant_id, ext_id, center_name, mode, created_at FROM center WHERE tenant_id = $1;`)
 	if err != nil {
 		return nil, err
 	}
@@ -139,14 +143,16 @@ func (r *CenterPGSQL) List(tenantID entity.ID) ([]*entity.Center, error) {
 
 	var ext_id sql.NullString
 	var name sql.NullString
+	var mode sql.NullString
 	for rows.Next() {
 		var c entity.Center
-		err = rows.Scan(&c.ID, &c.TenantID, &ext_id, &name, &c.Mode, &c.CreatedAt)
+		err = rows.Scan(&c.ID, &c.TenantID, &ext_id, &name, &mode, &c.CreatedAt)
 		if err != nil {
 			return nil, err
 		}
 		c.ExtID = ext_id.String
 		c.Name = name.String
+		c.Mode = entity.CenterMode(mode.String)
 		centers = append(centers, &c)
 	}
 	return centers, nil

@@ -12,6 +12,7 @@ import (
 	"net/http"
 	"strconv"
 
+	"sudhagar/glad/pkg/common"
 	"sudhagar/glad/usecase/label"
 
 	"sudhagar/glad/api/presenter"
@@ -32,7 +33,7 @@ func listLabels(service label.UseCase) http.Handler {
 		errorMessage := "Error reading labels"
 		var data []*entity.Label
 		var err error
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
@@ -81,7 +82,7 @@ func listLabels(service label.UseCase) http.Handler {
 			return
 		}
 		w.Header().Set(httpHeaderTotalCount, strconv.Itoa(total))
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 
 		var toJ []*presenter.Label
 		for _, d := range data {
@@ -107,7 +108,7 @@ func createLabel(service label.UseCase) http.Handler {
 			Color uint32 `json:"color"`
 		}
 
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
@@ -139,7 +140,7 @@ func createLabel(service label.UseCase) http.Handler {
 			TenantID: tenantID,
 		}
 
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		w.WriteHeader(http.StatusCreated)
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			log.Println(err.Error())
@@ -163,7 +164,7 @@ func getLabel(service label.UseCase) http.Handler {
 			return
 		}
 
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
@@ -172,7 +173,7 @@ func getLabel(service label.UseCase) http.Handler {
 		}
 
 		data, err := service.Get(tenantID, id)
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		if err != nil && err != entity.ErrNotFound {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte(errorMessage + ":" + err.Error()))
@@ -191,7 +192,7 @@ func getLabel(service label.UseCase) http.Handler {
 			Color: data.Color,
 		}
 
-		w.Header().Set(httpHeaderTenantID, data.TenantID.String())
+		w.Header().Set(common.HttpHeaderTenantID, data.TenantID.String())
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte("Unable to encode label"))
@@ -212,7 +213,7 @@ func deleteLabel(service label.UseCase) http.Handler {
 			return
 		}
 
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
@@ -221,7 +222,7 @@ func deleteLabel(service label.UseCase) http.Handler {
 		}
 
 		err = service.Delete(tenantID, id)
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		switch err {
 		case nil:
 			w.WriteHeader(http.StatusOK)
@@ -253,7 +254,7 @@ func updateLabel(service label.UseCase) http.Handler {
 		}
 
 		var input entity.Label
-		tenant := r.Header.Get(httpHeaderTenantID)
+		tenant := r.Header.Get(common.HttpHeaderTenantID)
 		tenantID, err := entity.StringToID(tenant)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
@@ -285,7 +286,7 @@ func updateLabel(service label.UseCase) http.Handler {
 			Color:    input.Color,
 		}
 
-		w.Header().Set(httpHeaderTenantID, tenant)
+		w.Header().Set(common.HttpHeaderTenantID, tenant)
 		w.WriteHeader(http.StatusOK)
 		if err := json.NewEncoder(w).Encode(toJ); err != nil {
 			log.Println(err.Error())

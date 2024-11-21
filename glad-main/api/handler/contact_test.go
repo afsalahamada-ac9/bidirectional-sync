@@ -14,6 +14,7 @@ import (
 
 	"sudhagar/glad/api/presenter"
 	"sudhagar/glad/entity"
+	"sudhagar/glad/pkg/common"
 
 	mock "sudhagar/glad/usecase/contact/mock"
 
@@ -64,7 +65,7 @@ func Test_listContacts(t *testing.T) {
 
 	client := &http.Client{}
 	req, _ := http.NewRequest(http.MethodGet, ts.URL, nil)
-	req.Header.Set(httpHeaderTenantID, tenantAlice.String())
+	req.Header.Set(common.HttpHeaderTenantID, tenantAlice.String())
 
 	q := req.URL.Query()
 	q.Add("index", "0")
@@ -86,5 +87,5 @@ func Test_listContacts(t *testing.T) {
 	assert.Equal(t, tmpl.AccountID, d[0].AccountID)
 	assert.Equal(t, tmpl.Handle, d[0].Handle)
 	assert.Equal(t, tmpl.Name, d[0].Name)
-	assert.Equal(t, tenantAlice.String(), res.Header.Get(httpHeaderTenantID))
+	assert.Equal(t, tenantAlice.String(), res.Header.Get(common.HttpHeaderTenantID))
 }
