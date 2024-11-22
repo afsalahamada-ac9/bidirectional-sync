@@ -1,0 +1,11 @@
+id,ext_id,username,first_name,last_name,phone,email,type,created_at,updated_at
+1,EXT001,jdoe,John,Doe,123-456-7890,jdoe@example.com,teacher,2023-01-01 12:00:00,2023-01-01 12:00:00
+2,EXT002,asmith,Alice,Smith,987-654-3210,asmith@example.com,organizer,2023-01-02 12:00:00,2023-01-02 12:00:00
+3,EXT003,bjones,Bob,Jones,555-123-4567,bjones@example.com,assistant-teacher,2023-01-03 12:00:00,2023-01-03 12:00:00
+4,EXT004,cmiller,Charlie,Miller,444-987-6543,cmiller@example.com,member,2023-01-04 12:00:00,2023-01-04 12:00:00
+5,EXT005,dlee,Diana,Lee,333-456-7890,dlee@example.com,user,2023-01-05 12:00:00,2023-01-05 12:00:00
+6,EXT006,ewang,Emily,Wang,222-345-6789,ewang@example.com,teacher,2023-01-06 12:00:00,2023-01-06 12:00:00
+7,EXT007,fharris,Frank,Harris,111-234-5678,fharris@example.com,organizer,2023-01-07 12:00:00,2023-01-07 12:00:00
+8,EXT008,gjohnson,Grace,Johnson,888-765-4321,gjohnson@example.com,assistant-teacher,2023-01-08 12:00:00,2023-01-08 12:00:00
+9,EXT009,hmartinez,Hector,Martinez,777-654-3210,hmartinez@example.com,member,2023-01-09 12:00:00,2023-01-09 12:00:00
+10,EXT010,ijones,Isabella,Jones,666-543-2109,ijones@example.com,user,2023-01-10 12:00:00,2023-01-10 12:00:00
