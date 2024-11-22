@@ -94,7 +94,8 @@ func processCSV(filePath string, db *gorm.DB) error {
 	}
 
 	// Get the table name and column headers
-	tableName := "dynamic_table" // Use a fixed table name or derive it dynamically
+	tableName := "test" // Use a fixed table name or derive it dynamically
+	// note : the tablename has to be changed if you're modifying the input structure
 	headers := records[0]
 
 	// Create the dynamic table
